@@ -586,7 +586,7 @@ MonoBehaviour:
     m_Bits: 8
   groundCheck: {fileID: 191115631}
   moveSpeed: 5
-  jumpForce: 2
+  jumpForce: 5
   healthMax: 10
   health: 0
 --- !u!114 &795402457
