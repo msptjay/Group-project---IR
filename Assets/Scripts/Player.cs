@@ -3,6 +3,10 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    //references to the game manager object and script
+    private GameObject gameManager;
+    private GameManager gM;
+
     [SerializeField] Rigidbody2D rb;
 
     [SerializeField] private LayerMask groundLayer;
@@ -14,11 +18,11 @@ public class Player : MonoBehaviour
     [SerializeField] private int health;
     private float horizontal;
 
-
-
     private void Awake()
     {
         health = healthMax;
+        gameManager = GameObject.Find("GameManager");
+        gM = gameManager.GetComponent<GameManager>();
     }
 
     private void FixedUpdate()
@@ -42,5 +46,13 @@ public class Player : MonoBehaviour
     {
         return Physics2D.OverlapCapsule(groundCheck.position, new Vector2(1f, 0.1f), CapsuleDirection2D.Horizontal, 0, groundLayer);
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("EndFlag"))
+        {
+            gM.LoadNextLevel();
+        }
     }
 }
