@@ -31,4 +31,10 @@ public class GameManager : MonoBehaviour
         else
             SceneManager.LoadScene(minigameNames[randomIndex]);
     }
+
+    public void TestOneLevel()
+    {
+        //put the string of the minigame you want to test here
+        SceneManager.LoadScene("BouncyBall");
+    }
 }
