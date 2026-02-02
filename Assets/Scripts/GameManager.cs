@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
     public int score = -1;
     //set minigame names through editor
     [SerializeField] string[] minigameNames;
+
+    //list of sprites/animations 
+    //walkSprite1 == walkSprite2
     void Start()
     {
         //the game manager won't be destroyed on scene transition

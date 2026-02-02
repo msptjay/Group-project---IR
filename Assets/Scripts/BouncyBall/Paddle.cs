@@ -9,7 +9,7 @@ public class Paddle : MonoBehaviour
 
     [SerializeField] Rigidbody2D rb;
 
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 50f;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private int healthMax = 10;
     [SerializeField] private int health;
@@ -21,7 +21,6 @@ public class Paddle : MonoBehaviour
         gameManager = GameObject.Find("GameManager");
         gM = gameManager.GetComponent<GameManager>();
     }
-
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
