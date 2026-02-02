@@ -20,6 +20,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayButton()
     {
-        gM.LoadNextLevel();
+        //gM.LoadNextLevel();
+        gM.TestOneLevel();
     }
 }
