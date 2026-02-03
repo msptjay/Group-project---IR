@@ -12,14 +12,12 @@ public class Paddle : MonoBehaviour
     [SerializeField] private float moveSpeed = 50f;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private int healthMax = 10;
-    [SerializeField] private int health;
     private float horizontal;
 
     private void Awake()
     {
-        health = healthMax;
-        gameManager = GameObject.Find("GameManager");
-        gM = gameManager.GetComponent<GameManager>();
+        //gameManager = GameObject.Find("GameManager");
+        //gM = gameManager.GetComponent<GameManager>();
     }
     private void FixedUpdate()
     {
@@ -31,11 +29,11 @@ public class Paddle : MonoBehaviour
         horizontal = context.ReadValue<Vector2>().x;
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("EndFlag"))
-        {
-            gM.LoadNextLevel();
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D col)
+    //{
+    //    if (col.gameObject.CompareTag("EndFlag"))
+    //    {
+    //        gM.LoadNextLevel();
+    //    }
+    //}
 }
