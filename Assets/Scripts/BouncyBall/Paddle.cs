@@ -8,10 +8,7 @@ public class Paddle : MonoBehaviour
     private GameManager gM;
 
     [SerializeField] Rigidbody2D rb;
-
     [SerializeField] private float moveSpeed = 50f;
-    [SerializeField] private float jumpForce = 10f;
-    [SerializeField] private int healthMax = 10;
     private float horizontal;
 
     private void Awake()
