@@ -1,0 +1,95 @@
+{
+    "version": 1,
+    "name": "TOWPlayer2",
+    "maps": [
+        {
+            "name": "P2Controller",
+            "id": "b317bfd2-28a3-4c3a-af7d-8c0335bff2d1",
+            "actions": [
+                {
+                    "name": "IA GameP Up",
+                    "type": "Button",
+                    "id": "d290f8e9-27eb-4959-92d0-676de2790a95",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "IA GameP Down",
+                    "type": "Button",
+                    "id": "6a3368e8-47a4-45ae-a730-17e9e158fcc4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "IA GameP Left",
+                    "type": "Button",
+                    "id": "09135a4b-5e9a-4c11-9ac8-63847085d52c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "IA GameP Right",
+                    "type": "Button",
+                    "id": "686cd9c7-ff8d-495b-aafe-89750a4a5a89",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fc04c011-885e-479e-acda-b97074398ca2",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "IA GameP Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4f437ce2-dfd6-4413-bf75-d9addc3f51c1",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "IA GameP Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "347f5e5f-aced-4f86-a40a-e51681b0d756",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "IA GameP Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "85f2d493-ae02-4e60-b827-f741f4926e1f",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "IA GameP Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
