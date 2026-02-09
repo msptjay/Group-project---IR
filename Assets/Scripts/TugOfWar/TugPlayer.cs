@@ -19,6 +19,7 @@ public class TugPlayer : MonoBehaviour
         
     }
 
+    //input slop, probably not optimal at all!! too bad !!!
     public void Up(InputAction.CallbackContext context)
     {
         tM.PlayerInput(playerNumber, 0);
