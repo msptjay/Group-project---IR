@@ -7,42 +7,6 @@
             "id": "b317bfd2-28a3-4c3a-af7d-8c0335bff2d1",
             "actions": [
                 {
-                    "name": "IA GameP Up",
-                    "type": "Button",
-                    "id": "cca8763d-9ec7-452f-9b6f-6fce5f01efeb",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "IA GameP Down",
-                    "type": "Button",
-                    "id": "4eb3f644-4a82-4010-be61-966d908dda1d",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "IA GameP Left",
-                    "type": "Button",
-                    "id": "eb8ab9d4-7320-4c7f-abd6-62956ef22245",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "IA GameP Right",
-                    "type": "Button",
-                    "id": "161d16a7-0cd3-46f8-b336-c061b1dcd868",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "IA Keyboard Up",
                     "type": "Button",
                     "id": "7a860aa0-d3ad-4878-a612-d8fcb49b601f",
@@ -82,52 +46,8 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "aa67ac2c-bf49-4705-89ab-5ec1a83e5ee1",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "IA GameP Left",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "41476930-1fbb-489d-bcd8-dfa70ae67045",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "IA GameP Up",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ae4d916e-8672-4fd0-a5a3-a540fefa7a98",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "IA GameP Down",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7dfa373e-a807-4c2f-804e-53dae6220962",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "IA GameP Right",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "a08fddd8-4b7a-4296-a8da-032783059f44",
-                    "path": "",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -138,7 +58,7 @@
                 {
                     "name": "",
                     "id": "b7355170-e6c3-4615-a86e-1a37345df78e",
-                    "path": "",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -149,7 +69,7 @@
                 {
                     "name": "",
                     "id": "2b049e0b-de59-4249-a2dc-55f055423d08",
-                    "path": "",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -160,7 +80,7 @@
                 {
                     "name": "",
                     "id": "1a386d48-b43b-47d8-9dba-fcc0acc6d643",
-                    "path": "",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
