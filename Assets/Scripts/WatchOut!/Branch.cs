@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Branch : MonoBehaviour
 {
-    [SerializeField] private int Damage = 1;
+    [SerializeField] private int damage = 1;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -12,9 +12,13 @@ public class Branch : MonoBehaviour
         {
             collision.gameObject
                 .GetComponent<PlayerHealth>()
-                .TakeDamage(Damage);
+                .TakeDamage(damage);
 
             Destroy(gameObject);
         }
+        if (collision.gameObject.CompareTag("Floor"))
+            {
+            Destroy(gameObject);
+            }
     }
 }
