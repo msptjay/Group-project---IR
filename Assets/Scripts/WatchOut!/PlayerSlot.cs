@@ -19,4 +19,12 @@ public class PlayerSlot : MonoBehaviour
 
         }
     }
+
+    private void ONtriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            manager.PlayerLeftSlot();
+        }
+    }
 }

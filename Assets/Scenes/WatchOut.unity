@@ -316,6 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 111491544}
   - component: {fileID: 111491545}
+  - component: {fileID: 111491546}
   m_Layer: 0
   m_Name: Spot3
   m_TagString: Untagged
@@ -384,6 +385,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &111491546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111491543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d967ecbcfc5daff2da53c4534b7833bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSlot
+  slotIndex: 3
 --- !u!1 &243145821
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,11 +485,45 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_ActionId
+      value: aa5d4701-97cd-4f21-9ae6-fa1c9bb52cfb
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[19].m_ActionName
+      value: TugOfWar/New action
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5039391558643926958, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 379714970}
   m_SourcePrefab: {fileID: 100100000, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+--- !u!1 &379714963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5039391558643926958, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+  m_PrefabInstance: {fileID: 271250712}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &379714970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379714963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f12d62a168ad341a7ec9b1c0a75a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 2
+  currentHealth: 0
 --- !u!1 &383287247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,6 +1173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 775234449}
   - component: {fileID: 775234450}
+  - component: {fileID: 775234451}
   m_Layer: 0
   m_Name: Spot1
   m_TagString: Untagged
@@ -1193,6 +1242,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &775234451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775234448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d967ecbcfc5daff2da53c4534b7833bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSlot
+  slotIndex: 1
 --- !u!1 &797513287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,6 +1709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1501639158}
   - component: {fileID: 1501639159}
+  - component: {fileID: 1501639160}
   m_Layer: 0
   m_Name: Spot0
   m_TagString: Untagged
@@ -1715,6 +1778,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1501639160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501639157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d967ecbcfc5daff2da53c4534b7833bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSlot
+  slotIndex: 0
 --- !u!1 &1533599261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,6 +1801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1533599262}
   - component: {fileID: 1533599263}
+  - component: {fileID: 1533599264}
   m_Layer: 0
   m_Name: Spot2
   m_TagString: Untagged
@@ -1793,6 +1870,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1533599264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533599261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d967ecbcfc5daff2da53c4534b7833bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSlot
+  slotIndex: 2
 --- !u!1 &1596934654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,7 +2432,7 @@ MonoBehaviour:
   branchPrefab: {fileID: 8211532627896626104, guid: 09888eb4fa3a0054f8fad1698a543b19, type: 3}
   countdown: {fileID: 1236242011}
   timerCountdown: 5
-  player: {fileID: 0}
+  player: {fileID: 379714970}
   roundActive: 0
   inPlace: 0
   ColumnPlace: -1
