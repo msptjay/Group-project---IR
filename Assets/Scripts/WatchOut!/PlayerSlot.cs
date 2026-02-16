@@ -15,6 +15,8 @@ public class PlayerSlot : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             manager.SetPlayerSlot(slotIndex);
+            manager.PlaceChecker();
+
         }
     }
 }
