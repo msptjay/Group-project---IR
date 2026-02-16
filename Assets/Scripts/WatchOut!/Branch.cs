@@ -4,7 +4,7 @@ using UnityEngine;
 public class Branch : MonoBehaviour
 {
     [SerializeField] private int damage = 1;
-
+    private ColumnManager manager;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -16,9 +16,23 @@ public class Branch : MonoBehaviour
 
             Destroy(gameObject);
         }
+
         if (collision.gameObject.CompareTag("Floor"))
-            {
-            Destroy(gameObject);
-            }
+        {
+
+            manager = FindObjectOfType<ColumnManager>();
+                if (!manager.IsPlayerInPlace())
+                {
+                    GameObject player = GameObject.FindGameObjectWithTag("Player");
+                    if(player != null)
+                    {
+                        player.GetComponent<PlayerHealth>().TakeDamage(damage);}
+                    }
+                Destroy(gameObject);
+        }
+        
+        
+        
+        
     }
 }

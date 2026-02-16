@@ -14,7 +14,7 @@ public class ColumnManager : MonoBehaviour
 
 //    [SerializeField] private TextMeshProUGUI playerHealth1;
     // [SerializeField] private TextMeshProUGUI playerHealth2;
-    [SerializeField] private float timerCountdown = 10f;
+    [SerializeField] private float timerCountdown;
     [SerializeField] private PlayerHealth player;
     [SerializeField] private bool roundActive;
     [SerializeField] private bool inPlace = false;
@@ -22,6 +22,7 @@ public class ColumnManager : MonoBehaviour
 
     private void Start()
     {
+        timerCountdown = 10f;
        StartRound();
     }
 
@@ -45,6 +46,17 @@ public class ColumnManager : MonoBehaviour
     {
         inPlace = true;
     }
+
+    public void PlayerLeftSlot()
+    {
+        inPlace = false;
+    }
+    
+    public bool IsPlayerInPlace()
+    {
+        return inPlace;
+    }
+
     public void StartRound()
     {
         roundActive = true;
