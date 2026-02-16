@@ -22,12 +22,13 @@ public class ColumnManager : MonoBehaviour
 
     private void Start()
     {
-        roundActive = true;
+       StartRound();
     }
 
     private void Update()
     {
         if (!roundActive) return;
+        
 
         timerCountdown -= Time.deltaTime;
         countdown.text = "Timer : " + timerCountdown;
@@ -35,20 +36,19 @@ public class ColumnManager : MonoBehaviour
         {
            // LockPlayer();
             SpawnBranch();
-            roundActive = false;
+            timerCountdown = 10f;
         }
+        
     }
 
+   public void PlaceChecker()
+    {
+        inPlace = true;
+    }
     public void StartRound()
     {
         roundActive = true;
-
-        if (ColumnPlace == -1)
-        {
-            Debug.Log("Player did not choose a column!");
-            return;
-        }
-
+        inPlace = false;
     }
 
     public void SetPlayerSlot(int slotIndex)
