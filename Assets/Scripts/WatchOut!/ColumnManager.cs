@@ -9,7 +9,7 @@ public class ColumnManager : MonoBehaviour
 
     [SerializeField] private Collider2D[] playerSlots;
     [SerializeField] private GameObject branchPrefab;
-
+    [SerializeField] private GameObject fruitPrefab;
     [SerializeField] private TextMeshProUGUI countdown;
 
 //    [SerializeField] private TextMeshProUGUI playerHealth1;
@@ -36,7 +36,7 @@ public class ColumnManager : MonoBehaviour
         if (timerCountdown <= 0)
         {
            // LockPlayer();
-            SpawnBranch();
+            SpawnBranchAndFruit();
             timerCountdown = 10f;
         }
         
@@ -80,12 +80,14 @@ public void LockedInSpot(int column)
         }
     }
     
-    private void SpawnBranch()
+    private void SpawnBranchAndFruit()
     {
         int randomColumn = Random.Range(0, columns.Length);
         Instantiate(branchPrefab,columns[randomColumn].position,Quaternion.identity);
         Debug.Log("Spawned branch");
     }
+    
+    
 
     private void LockPlayer()
     {
