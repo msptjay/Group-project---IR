@@ -86,6 +86,8 @@ public void LockedInSpot(int column)
         Instantiate(branchPrefab,columns[randomColumn].position,Quaternion.identity);
         Debug.Log("Spawned branch");
     }
+    
+    
 
     private void LockPlayer()
     {
