@@ -83,8 +83,21 @@ public void LockedInSpot(int column)
     private void SpawnBranchAndFruit()
     {
         int randomColumn = Random.Range(0, columns.Length);
-        Instantiate(branchPrefab,columns[randomColumn].position,Quaternion.identity);
-        Debug.Log("Spawned branch");
+        for (int i = 0; i < columns.Length; i++)
+        {
+            if (i == randomColumn)
+            {
+                // Spawn branch in the chosen column
+                Instantiate(branchPrefab, columns[i].position, Quaternion.identity);
+            }
+            else
+            {
+                // Spawn fruit in all other columns
+                Instantiate(fruitPrefab, columns[i].position, Quaternion.identity);
+            }
+        }
+
+        Debug.Log("Spawned branch and fruits");
     }
     
     
