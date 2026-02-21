@@ -2430,6 +2430,7 @@ MonoBehaviour:
   - {fileID: 1533599263}
   - {fileID: 111491545}
   branchPrefab: {fileID: 8211532627896626104, guid: 09888eb4fa3a0054f8fad1698a543b19, type: 3}
+  fruitPrefab: {fileID: 8211532627896626104, guid: db8c1bef8f8edb1d887d384f43b05476, type: 3}
   countdown: {fileID: 1236242011}
   timerCountdown: 5
   player: {fileID: 379714970}
