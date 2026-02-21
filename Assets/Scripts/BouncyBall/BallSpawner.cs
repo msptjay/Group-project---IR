@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+using TMPro;
 public class BallSpawner : MonoBehaviour
 {
     [SerializeField] Rect rectangleSpawns;
@@ -9,6 +9,10 @@ public class BallSpawner : MonoBehaviour
 
     [SerializeField] int player1Score = 0;
     [SerializeField] int player2Score = 0;
+
+
+    //Miles Code
+    
 
     bool shouldSpawnBall = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,13 +23,13 @@ public class BallSpawner : MonoBehaviour
         {
             SpawnBall();
         }
+
+        
+       
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     void SpawnBall()
     {

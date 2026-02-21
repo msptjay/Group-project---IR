@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BouncyBall.unity
     guid: 7615e32dd63cc014f8c578f799ed6e14
+  - enabled: 1
+    path: Assets/Scenes/TugOfWar.unity
+    guid: 704efecb3146db64f868bb476d879d5e
+  - enabled: 1
+    path: Assets/Scenes/WatchOut.unity
+    guid: 31fdb0a758861dc45a0dc3c65d79751d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 6aa04949d3c59cab1b0fdadeccc05e20, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
