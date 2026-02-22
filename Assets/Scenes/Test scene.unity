@@ -290,6 +290,8 @@ MonoBehaviour:
   minigameNames:
   - BouncyBall
   - Platformer
+  - TugOfWar
+  - WatchOut
 --- !u!4 &91481745
 Transform:
   m_ObjectHideFlags: 0
