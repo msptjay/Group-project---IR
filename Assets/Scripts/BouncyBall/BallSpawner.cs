@@ -61,4 +61,6 @@ public class BallSpawner : MonoBehaviour
 
         bouncyBallUI.UpdateScore(player1Score, player2Score);
     }
+
+    //AFTER THE TIMER OF THE GAME RUNS OUT - SEE WHO HAS MOST SCORE
 }
