@@ -9,6 +9,10 @@ TagManager:
   - ScoreFloor
   - BouncyBallManager
   - Floor
+  - BluB Box
+  - StrB Box
+  - CraB Box
+  - BlaB Box
   layers:
   - Default
   - TransparentFX
