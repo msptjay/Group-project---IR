@@ -15,6 +15,7 @@ public class ColumnManager : MonoBehaviour
 //    [SerializeField] private TextMeshProUGUI playerHealth1;
     // [SerializeField] private TextMeshProUGUI playerHealth2;
     [SerializeField] private float timerCountdown;
+    [SerializeField] private float timerCooldown;
     [SerializeField] private PlayerHealth player;
     [SerializeField] private bool roundActive;
     [SerializeField] private bool inPlace = false;
@@ -29,20 +30,19 @@ public class ColumnManager : MonoBehaviour
     private void Update()
     {
         if (!roundActive) return;
-        
 
+       
         timerCountdown -= Time.deltaTime;
-        countdown.text = "Timer : " + timerCountdown;
+        int seconds = Mathf.FloorToInt(timerCountdown % 60f);
+        countdown.text = string.Format("{0:00}", seconds);
         if (timerCountdown <= 0)
         {
-           // LockPlayer();
             SpawnBranchAndFruit();
             timerCountdown = 10f;
         }
         
     }
-
-   public void PlaceChecker()
+    public void PlaceChecker()
     {
         inPlace = true;
     }
