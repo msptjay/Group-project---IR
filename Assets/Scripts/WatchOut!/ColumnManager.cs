@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class ColumnManager : MonoBehaviour
 {
@@ -21,27 +22,43 @@ public class ColumnManager : MonoBehaviour
     [SerializeField] private bool inPlace = false;
     [SerializeField] private int ColumnPlace = -1;
 
+    [SerializeField] private  PlayerInput playerInput;
     private void Start()
     {
         timerCountdown = 10f;
+        StartCoroutine(Countdown());
+      //  timerCountdown = 10f;
        StartRound();
     }
 
     private void Update()
     {
         if (!roundActive) return;
-
-       
-        timerCountdown -= Time.deltaTime;
-        int seconds = Mathf.FloorToInt(timerCountdown % 60f);
-        countdown.text = string.Format("{0:00}", seconds);
-        if (timerCountdown <= 0)
-        {
-            SpawnBranchAndFruit();
-            timerCountdown = 10f;
-        }
+        
         
     }
+
+    IEnumerator Countdown()
+    {
+        while (true)
+        {
+            float timer = timerCountdown;
+            playerInput.ActivateInput();
+            while (timer > 0)
+            {
+                countdown.text = "Timer: " + timer; 
+                timer -= Time.deltaTime;
+                yield return null;
+            }
+
+            countdown.text = "Test";
+            playerInput.DeactivateInput();
+            SpawnBranchAndFruit();
+
+            yield return new WaitForSeconds(3f);
+        }
+    }
+
     public void PlaceChecker()
     {
         inPlace = true;
@@ -102,7 +119,7 @@ public void LockedInSpot(int column)
     
     
 
-    private void LockPlayer()
+   /* private void LockPlayer()
     {
         if (timerCountdown <= 0f && gameObject.CompareTag("Player"))
         {
@@ -114,5 +131,5 @@ public void LockedInSpot(int column)
             inPlace = false;
             Debug.Log("You haven't made it in time :(");
         }
-    }
+    } */
 }
