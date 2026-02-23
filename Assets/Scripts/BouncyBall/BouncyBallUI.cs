@@ -30,7 +30,7 @@ public class BouncyBallUI : MonoBehaviour
 
     public void UpdateScore(int player1Score, int player2Score)
     {
-        p1ScoreText.text = "Player 1: " + player1Score;
-        p2ScoreText.text = "Player 2: " + player2Score;
+        p1ScoreText.text = player1Score.ToString();
+        p2ScoreText.text = player2Score.ToString();
     }
 }
