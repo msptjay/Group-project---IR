@@ -1061,6 +1061,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "TutorialEnd",
+                    "type": "Button",
+                    "id": "f37be0f9-e0b8-4b1f-9881-d85a686e91aa",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1105,6 +1114,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d745a342-182d-43ee-abd8-bcc8a565c33d",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TutorialEnd",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

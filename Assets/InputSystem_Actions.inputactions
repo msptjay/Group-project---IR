@@ -1061,6 +1061,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "TutorialEnd",
+                    "type": "Button",
+                    "id": "40ba6412-f63a-452e-aee9-5a43a3c1ef9e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1079,7 +1088,7 @@
                     "name": "",
                     "id": "48954bc8-1ba4-44d2-a00e-4c5797126c9b",
                     "path": "<Gamepad>/buttonWest",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Left",
@@ -1101,10 +1110,21 @@
                     "name": "",
                     "id": "4a2be1e3-8856-453c-9b56-1c57540025df",
                     "path": "<Gamepad>/buttonEast",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3d52b47d-c660-4273-9793-96352641b8eb",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TutorialEnd",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

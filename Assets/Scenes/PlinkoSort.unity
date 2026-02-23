@@ -1654,6 +1654,10 @@ MonoBehaviour:
     m_ActionId: fa97694d-8003-4c29-bfb9-1c94ee8b17b5
     m_ActionName: 'Plinko/Right[/Keyboard/d,/XInputControllerWindows/buttonEast]'
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 82312401-92c4-404e-9e3d-ee8864ab2540
+    m_ActionName: 'Player/Start[/XInputControllerWindows/start,/XInputControllerWindows1/start]'
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 655730373}
         m_TargetAssemblyTypeName: PlinkoPlayer, Assembly-CSharp
@@ -1667,10 +1671,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 82312401-92c4-404e-9e3d-ee8864ab2540
-    m_ActionName: 'Player/Start[/XInputControllerWindows/start,/XInputControllerWindows1/start]'
+    m_ActionId: 40ba6412-f63a-452e-aee9-5a43a3c1ef9e
+    m_ActionName: 'Plinko/TutorialEnd[/XInputControllerWindows/start,/XInputControllerWindows1/start]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Plinko
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -2379,6 +2383,10 @@ MonoBehaviour:
     m_ActionId: fa97694d-8003-4c29-bfb9-1c94ee8b17b5
     m_ActionName: 'Plinko/Right[/Keyboard/d,/XInputControllerWindows/buttonEast]'
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d60a2111-14ce-4bc7-8b9d-6f7089d99385
+    m_ActionName: 'Player/Start[/XInputControllerWindows/start,/XInputControllerWindows1/start]'
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 890380567}
         m_TargetAssemblyTypeName: PlinkoPlayer, Assembly-CSharp
@@ -2392,8 +2400,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: d60a2111-14ce-4bc7-8b9d-6f7089d99385
-    m_ActionName: 'Player/Start[/XInputControllerWindows/start,/XInputControllerWindows1/start]'
+    m_ActionId: f37be0f9-e0b8-4b1f-9881-d85a686e91aa
+    m_ActionName: 'Plinko/TutorialEnd[/XInputControllerWindows/start,/XInputControllerWindows1/start]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Plinko
