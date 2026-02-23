@@ -17,45 +17,40 @@ public class PlinkoFruit : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("BluB Box"))
-        {
-            if(FruitType == 0)
+        switch (collision.gameObject.tag)
             {
-                Debug.Log("BLUEBERRY CORREC T!!!!!");
+            case "BluB Box":
+                if (FruitType == 0)
+                {
+                    Debug.Log("BLUEBERRY CORRECT!!!!!");
+                    Destroy(gameObject);
+                }
+                
+                break;
+            case "StrB Box":
+                if (FruitType == 1)
+                {
+                    Debug.Log("STRAWBERRY CORRECT!!!!!");
+                    Destroy(gameObject);
+                }
+                break;
+            case "CraB Box":
+                if (FruitType == 2)
+                {
+                    Debug.Log("CRANBERRY CORRECT!!!!!");
+                    Destroy(gameObject);
+                }
+                break;
+            case "BlaB Box":
+                if (FruitType == 3)
+                {
+                    Debug.Log("BLACKBERRY CORRECT!!!!!");
+                    Destroy(gameObject);
+                }
+                break;
+            default:
                 Destroy(gameObject);
-            }
-            else
-                Destroy(gameObject);
-        }
-        if(collision.gameObject.CompareTag("StrB Box"))
-        {
-            if (FruitType == 1)
-            {
-                Debug.Log("STRAWBERRY CORRECT!!!!!");
-                Destroy(gameObject);
-            }
-            else
-                Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("CraB Box"))
-        {
-            if (FruitType == 2)
-            {
-                Debug.Log("CRANBERRY CORRECT!!!!!");
-                Destroy(gameObject);
-            }
-            else
-                Destroy(gameObject);
-        }
-        if(collision.gameObject.CompareTag("BlaB Box"))
-        {
-            if (FruitType == 3)
-            {
-                Debug.Log("BLACKBERRY CORRECT!!!!!");
-                Destroy(gameObject);
-            }
-            else
-                Destroy(gameObject);
+                break;
         }
     }
 }
