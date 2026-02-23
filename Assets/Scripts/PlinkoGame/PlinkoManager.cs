@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlinkoManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class PlinkoManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Time.timeScale = 0f;
         StartCoroutine(SpawnBerry());
     }
 
@@ -49,4 +51,6 @@ public class PlinkoManager : MonoBehaviour
         }
         pUIM.UpdateScores(p1Score, p2Score);
     }
+
+    
 }
