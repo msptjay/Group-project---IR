@@ -12,6 +12,7 @@ public class ColumnManager : MonoBehaviour
     [SerializeField] private GameObject branchPrefab;
     [SerializeField] private GameObject fruitPrefab;
     [SerializeField] private TextMeshProUGUI countdown;
+    [SerializeField] private GameManager gm;
 
 //    [SerializeField] private TextMeshProUGUI playerHealth1;
     // [SerializeField] private TextMeshProUGUI playerHealth2;
@@ -35,7 +36,7 @@ public class ColumnManager : MonoBehaviour
     {
         if (!roundActive) return;
         
-        
+
     }
 
     IEnumerator Countdown()
