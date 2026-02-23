@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
     }
     void Awake()
     {
-        TutorialHolder = GameObject.FindWithTag("TutorialHolder");
-        Time.timeScale = 0f;
+     //   TutorialHolder = GameObject.FindWithTag("TutorialHolder");
+      //  Time.timeScale = 0f;
     }
 
     public void LoadNextLevel()

@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 2986309325858192703}
   - component: {fileID: 1941139771130992675}
   - component: {fileID: 8103584887327568881}
-  - component: {fileID: 2308277651675252265}
+  - component: {fileID: 6719291437844600990}
   m_Layer: 0
   m_Name: Fruit
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8211532627896626104}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.50872, y: -1.71901, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -167,7 +167,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.32, y: 1.12}
   m_EdgeRadius: 0
---- !u!114 &2308277651675252265
+--- !u!114 &6719291437844600990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8211532627896626104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80cad29bc9b64c5458f98b8cc7be8d62, type: 3}
+  m_Script: {fileID: 11500000, guid: 1df8066f9594bf0d89b4aa387811ddba, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Branch
+  m_EditorClassIdentifier: Assembly-CSharp::Fruit_Stuff
   damage: 1

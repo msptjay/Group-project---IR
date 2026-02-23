@@ -11,12 +11,11 @@ public class Fruit_Stuff : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
           //  collision.gameObject
-               // .GetComponent<PlayerHealth>();
-            //    .TakeDamage(damage);
+             //   .GetComponent<PlayerHealth>() .TakeDamage(damage);
 
             Destroy(gameObject);
         }
-
+        
         if (collision.gameObject.CompareTag("Floor"))
         {
                 Destroy(gameObject);

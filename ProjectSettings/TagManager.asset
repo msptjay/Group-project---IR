@@ -16,6 +16,7 @@ TagManager:
   - PlinkoManager
   - Ground
   - TutorialHolder
+  - Fruit
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - Water
   - UI
   - Wall
-  - 
-  - 
+  - Player
+  - Fruit
   - 
   - 
   - 

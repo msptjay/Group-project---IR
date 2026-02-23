@@ -1,4 +1,4 @@
-using System;
+ using System;
 using UnityEngine;
 
 public class Branch : MonoBehaviour
@@ -28,6 +28,7 @@ public class Branch : MonoBehaviour
                     {
                         player.GetComponent<PlayerHealth>().TakeDamage(damage);}
                     }
+                    
                 Destroy(gameObject);
         }
         
