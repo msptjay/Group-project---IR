@@ -6,6 +6,7 @@ public class PlinkoPlayer : MonoBehaviour
     [SerializeField] GameObject[] plinkoPegs;
     bool shouldSpinLeft;
     bool shouldSpinRight;
+    [SerializeField] GameObject tutorialHolder;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Update()
     {
@@ -13,7 +14,7 @@ public class PlinkoPlayer : MonoBehaviour
         {
             foreach (GameObject peg in plinkoPegs)
             {
-                peg.transform.Rotate(0, 0, -1);
+                peg.transform.Rotate(0, 0, -0.5f);
             }
             
         }
@@ -21,7 +22,7 @@ public class PlinkoPlayer : MonoBehaviour
         {
             foreach (GameObject peg in plinkoPegs)
             {
-                peg.transform.Rotate(0, 0, 1);
+                peg.transform.Rotate(0, 0, 0.5f);
             }
         }
     }
@@ -49,4 +50,13 @@ public class PlinkoPlayer : MonoBehaviour
             shouldSpinRight = false;
         }
     }
+    public void FinishTutorial(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Time.timeScale = 1f;
+            tutorialHolder.SetActive(false);
+        }
+    }
+
 }
