@@ -13,7 +13,7 @@ public class PlinkoPlayer : MonoBehaviour
         {
             foreach (GameObject peg in plinkoPegs)
             {
-                peg.transform.Rotate(0, 0, -1);
+                peg.transform.Rotate(0, 0, -0.5f);
             }
             
         }
@@ -21,7 +21,7 @@ public class PlinkoPlayer : MonoBehaviour
         {
             foreach (GameObject peg in plinkoPegs)
             {
-                peg.transform.Rotate(0, 0, 1);
+                peg.transform.Rotate(0, 0, 0.5f);
             }
         }
     }

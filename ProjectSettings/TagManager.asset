@@ -13,6 +13,8 @@ TagManager:
   - StrB Box
   - CraB Box
   - BlaB Box
+  - PlinkoManager
+  - Ground
   layers:
   - Default
   - TransparentFX
