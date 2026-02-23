@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int score = -1;
+    public int overallP1Score;
+    public int overallP2Score;
     //set minigame names through editor
     [SerializeField] string[] minigameNames;
 
@@ -15,13 +16,11 @@ public class GameManager : MonoBehaviour
     }
     void Awake()
     {
-     //   TutorialHolder = GameObject.FindWithTag("TutorialHolder");
-      //  Time.timeScale = 0f;
+      
     }
 
     public void LoadNextLevel()
     {
-        score++;
         //picks a random minigame from the array and loads it
         int randomIndex = Random.Range(0, minigameNames.Length);
         if (minigameNames[randomIndex] == SceneManager.GetActiveScene().name)
@@ -37,5 +36,17 @@ public class GameManager : MonoBehaviour
     {
         //put the string of the minigame you want to test here
         SceneManager.LoadScene("BouncyBall");
+    }
+
+    public void LevelEnded(int p1Score, int p2Score)
+    {
+        if(p1Score > p2Score)
+        {
+            overallP1Score++;
+        }
+        else if(p2Score > p1Score)
+        {
+            overallP2Score++;
+        }
     }
 }
