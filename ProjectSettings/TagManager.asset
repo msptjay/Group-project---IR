@@ -15,6 +15,7 @@ TagManager:
   - BlaB Box
   - PlinkoManager
   - Ground
+  - TutorialHolder
   layers:
   - Default
   - TransparentFX

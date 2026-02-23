@@ -7,18 +7,16 @@ public class GameManager : MonoBehaviour
     //set minigame names through editor
     [SerializeField] string[] minigameNames;
 
-    //list of sprites/animations 
-    //walkSprite1 == walkSprite2
+    GameObject TutorialHolder;
     void Start()
     {
         //the game manager won't be destroyed on scene transition
         DontDestroyOnLoad(this.gameObject);
     }
-
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        TutorialHolder = GameObject.FindWithTag("TutorialHolder");
+        Time.timeScale = 0f;
     }
 
     public void LoadNextLevel()

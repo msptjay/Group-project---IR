@@ -265,6 +265,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: fa97694d-8003-4c29-bfb9-1c94ee8b17b5
     m_ActionName: 'Plinko/Right[/Keyboard/d,/XInputControllerWindows/buttonEast,/XInputControllerWindows1/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 65397274}
+        m_TargetAssemblyTypeName: Paddle, Assembly-CSharp
+        m_MethodName: FinishTutorial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 82312401-92c4-404e-9e3d-ee8864ab2540
+    m_ActionName: 'Player/Start[/XInputControllerWindows/start,/XInputControllerWindows1/start]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
@@ -420,6 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb3fa3c0e9532a4eb0259e7eb8411e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Paddle
+  tutorialHolder: {fileID: 625580719}
   rb: {fileID: 65397273}
   moveSpeed: 5
 --- !u!1 &109324668
@@ -1344,11 +1361,11 @@ GameObject:
   - component: {fileID: 625580720}
   m_Layer: 5
   m_Name: '! Tutorial Holder'
-  m_TagString: Untagged
+  m_TagString: TutorialHolder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &625580720
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2587,6 +2604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb3fa3c0e9532a4eb0259e7eb8411e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Paddle
+  tutorialHolder: {fileID: 625580719}
   rb: {fileID: 1416953390}
   moveSpeed: 5
 --- !u!114 &1416953392
@@ -2714,6 +2732,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: fa97694d-8003-4c29-bfb9-1c94ee8b17b5
     m_ActionName: 'Plinko/Right[/Keyboard/d,/XInputControllerWindows/buttonEast,/XInputControllerWindows1/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1416953391}
+        m_TargetAssemblyTypeName: Paddle, Assembly-CSharp
+        m_MethodName: FinishTutorial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d60a2111-14ce-4bc7-8b9d-6f7089d99385
+    m_ActionName: 'Player/Start[/XInputControllerWindows/start,/XInputControllerWindows1/start]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
@@ -3229,7 +3263,7 @@ GameObject:
   - component: {fileID: 1743579477}
   - component: {fileID: 1743579476}
   m_Layer: 5
-  m_Name: Body Controls (1)
+  m_Name: Start to Begin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3274,7 +3308,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press A to continue
+  m_text: Press START to continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3340,7 +3374,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -316.51562, w: -38.025696}
+  m_margin: {x: -142.46326, y: 0, z: -316.51562, w: -38.025696}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
