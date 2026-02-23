@@ -10,6 +10,8 @@ public class PlinkoManager : MonoBehaviour
     [SerializeField] GameObject[] Berries;
     [SerializeField] GameObject plinkoUIManager;
     [SerializeField] PlinkoUIManager pUIM;
+    int secondsLeft = 30;
+    float targetTime = 1;
 
     public int p1Score;
     public int p2Score;
@@ -23,7 +25,15 @@ public class PlinkoManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        targetTime -= Time.deltaTime;
+
+        if (targetTime <= 0.0f)
+        {
+            secondsLeft--;
+            pUIM.UpdateTimer(secondsLeft);
+            targetTime = 1.0f;
+        }
+
     }
 
     IEnumerator SpawnBerry()
@@ -35,8 +45,8 @@ public class PlinkoManager : MonoBehaviour
             difficultyRamp += 0.5f;
             if (difficultyRamp % 1 == 0 && spawnTime > 2)
                 spawnTime -= 0.5f;
+            
             yield return new WaitForSeconds(spawnTime);
-
         }
     }
     public void AddScore(int score, bool P1score)

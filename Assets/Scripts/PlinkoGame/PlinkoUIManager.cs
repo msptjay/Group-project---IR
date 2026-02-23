@@ -5,6 +5,7 @@ public class PlinkoUIManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI p1ScoreText;
     [SerializeField] TextMeshProUGUI p2ScoreText;
+    [SerializeField] TextMeshProUGUI timer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,5 +22,9 @@ public class PlinkoUIManager : MonoBehaviour
     {
         p1ScoreText.text = p1Score.ToString();
         p2ScoreText.text = p2Score.ToString();
+    }
+    public void UpdateTimer(float timeLeft)
+    {
+         timer.text = timeLeft.ToString();
     }
 }
