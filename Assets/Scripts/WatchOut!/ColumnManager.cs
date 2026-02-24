@@ -24,6 +24,7 @@ public class ColumnManager : MonoBehaviour
     [SerializeField] private int ColumnPlace = -1;
 
     [SerializeField] private  PlayerInput playerInput;
+    [SerializeField] private PlayerInput playerInput2;
     private void Start()
     {
         timerCountdown = 10f;
@@ -45,6 +46,7 @@ public class ColumnManager : MonoBehaviour
         {
             float timer = timerCountdown;
             playerInput.ActivateInput();
+            playerInput2.ActivateInput();
             while (timer > 0)
             {
                 countdown.text = "Timer: " + timer; 
@@ -54,6 +56,7 @@ public class ColumnManager : MonoBehaviour
 
             countdown.text = "Test";
             playerInput.DeactivateInput();
+            playerInput2.DeactivateInput();
             SpawnBranchAndFruit();
 
             yield return new WaitForSeconds(3f);
