@@ -1,12 +1,13 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Windows;
 
 public class TugManager : MonoBehaviour
 {
     public float targetTime = 6.0f;
 
     //0= up, 1= down, 2= left, 3= right
-    [SerializeField] int buttonInput;
+    [SerializeField] int buttonInput = 4;
     bool hasPlayerAnsweredCorrect = false;
     bool shouldTimerRun = true;
     [SerializeField] Sprite[] arrowSprites;
@@ -18,9 +19,14 @@ public class TugManager : MonoBehaviour
     [SerializeField] int player1Score;
     [SerializeField] int player2Score;
 
+    [SerializeField] GameObject UIManager;
+    [SerializeField] TugUIManager tUIM;
+
+
     private void Start()
     {
         arrowSpriteRenderer = arrowSpawnPoint.GetComponent<SpriteRenderer>();
+        arrowSpriteRenderer.sprite = arrowSprites[4];
     }
     void Update()
     {
@@ -28,9 +34,21 @@ public class TugManager : MonoBehaviour
         if (shouldTimerRun)
         {
             targetTime -= Time.deltaTime;
-
+            if (targetTime >= 5.95)
+            {
+                arrowSpriteRenderer.sprite = arrowSprites[4];
+            }
+            if(targetTime < 2.5f && targetTime > 1.5f)
+            {
+                arrowSpriteRenderer.color = Color.yellow;
+            }
+            if(targetTime <= 1.5f && targetTime > 0.01f)
+            {
+                arrowSpriteRenderer.color = Color.red;
+            }
             if (targetTime <= 0.0f)
             {
+                arrowSpriteRenderer.color = Color.white;
                 shouldTimerRun = false;
                 timerEnded();
             }
@@ -39,6 +57,8 @@ public class TugManager : MonoBehaviour
 
     void timerEnded()
     {
+        hasPlayer1Answered = false;
+        hasPlayer2Answered = false;
         hasPlayerAnsweredCorrect = false;
         //pick a random button input
         buttonInput = Random.Range(0, 4);
@@ -54,67 +74,82 @@ public class TugManager : MonoBehaviour
         }
     }
 
-    public void PlayerInput(int playerNumber, int input)
+    
+    public void Player1Answer(int input)
     {
-        //BIG switch statement 
-        switch (playerNumber)
+        if (!hasPlayerAnsweredCorrect && !hasPlayer1Answered)
         {
-            //if player 1 answers do this
-            case 1:
-                if (!hasPlayerAnsweredCorrect)
-                {
-                    //if correct?
-                    if (input == buttonInput)
-                    {
-                        Debug.Log("Player 1 is correct!");
-                        targetTime = 6.0f;
-                        hasPlayerAnsweredCorrect = true;
-                        hasPlayer1Answered = true;
-                        shouldTimerRun = true;
-                        player1Score++;
-                    }
-                    //if wrong?
-                    else
-                    {
-                        hasPlayer1Answered = true;
-                        Debug.Log("Player 1 is wrong!");
-                    }
-                }
-                break;
-            //if player 2 answers do this
-            case 2:
-                if (!hasPlayerAnsweredCorrect)
-                {
-                    //if correct?
-                    if (input == buttonInput)
-                    {
-                        Debug.Log("Player 2 is correct!");
-                        targetTime = 6.0f;
-                        hasPlayerAnsweredCorrect = true;
-                        hasPlayer2Answered = true;
-                        shouldTimerRun = true;
-                        player2Score++;
-                    }
-                    //if wrong
-                    else
-                    {
-                        hasPlayer2Answered = true;
-                        Debug.Log("Player 2 is wrong!");
-                    }
-                }
-                break;
-            default:
-                Debug.Log("something went REALLY wrong??");
-                break;
+            //if correct?
+            if (input == buttonInput)
+            {
+                Debug.Log("Player 1 is correct!");
+                targetTime = 6.0f;
+                hasPlayerAnsweredCorrect = true;
+                hasPlayer1Answered = true;
+                shouldTimerRun = true;
+                player1Score++;
+                tUIM.UpdateScores(player1Score, player2Score);
+                ResetInputs();
+            }
+            //if wrong?
+            else
+            {
+                hasPlayer1Answered = true;
+                Debug.Log("Player 1 is wrong!");
+                if (hasPlayer1Answered && hasPlayer2Answered)
+                    ResetInputs();
+            }
         }
+        //if (hasPlayer1Answered && hasPlayer2Answered)
+        //{
+        //    hasPlayer1Answered = false;
+        //    hasPlayer2Answered = false;
+        //    targetTime = 6.0f;
+        //    shouldTimerRun = true;
+        //}
+    }
 
-        if(hasPlayer1Answered && hasPlayer2Answered)
+    public void Player2Answer(int input)
+    {
+        if (!hasPlayerAnsweredCorrect && !hasPlayer2Answered)
         {
-            hasPlayer1Answered = false;
-            hasPlayer2Answered = false;
-            targetTime = 6.0f;
-            shouldTimerRun = true;
+            //if correct?
+            if (input == buttonInput)
+            {
+                Debug.Log("Player 2 is correct!");
+                targetTime = 6.0f;
+                hasPlayerAnsweredCorrect = true;
+                hasPlayer2Answered = true;
+                shouldTimerRun = true;
+                player2Score++;
+                tUIM.UpdateScores(player1Score, player2Score);
+                ResetInputs();
+            }
+            //if wrong
+            else
+            {
+                hasPlayer2Answered = true;
+                Debug.Log("Player 2 is wrong!");
+                if(hasPlayer1Answered && hasPlayer2Answered)
+                    ResetInputs();
+            }
         }
+        //if (hasPlayer1Answered && hasPlayer2Answered)
+        //{
+        //    hasPlayer1Answered = false;
+        //    hasPlayer2Answered = false;
+        //    targetTime = 6.0f;
+        //    shouldTimerRun = true;
+        //}
+    }
+
+    void ResetInputs()
+    {
+         hasPlayer1Answered = false;
+         hasPlayer2Answered = false;
+         targetTime = 6.0f;
+         shouldTimerRun = true;
+        
     }
 
     void SpawnIcon()
@@ -139,3 +174,74 @@ public class TugManager : MonoBehaviour
         }
     }
 }
+
+
+
+
+
+
+
+//NONE OF THIS WORKS BY THE WAY BECAUSE MY PROGRAMMING IS TERRIBLE :((((
+//public void PlayerInput(int playerNumber, int input)
+//{
+//    //BIG switch statement 
+//    switch (playerNumber)
+//    {
+//        //if player 1 answers do this
+//        case 1:
+//            if (!hasPlayerAnsweredCorrect)
+//            {
+//                //if correct?
+//                if (input == buttonInput)
+//                {
+//                    Debug.Log("Player 1 is correct!");
+//                    targetTime = 6.0f;
+//                    hasPlayerAnsweredCorrect = true;
+//                    hasPlayer1Answered = true;
+//                    shouldTimerRun = true;
+//                    player1Score++;
+//                }
+//                //if wrong?
+//                else
+//                {
+//                    hasPlayer1Answered = true;
+//                    Debug.Log("Player 1 is wrong!");
+//                }
+//            }
+//            break;
+//        //if player 2 answers do this
+//        case 2:
+//            if (!hasPlayerAnsweredCorrect)
+//            {
+//                //if correct?
+//                if (input == buttonInput)
+//                {
+//                    Debug.Log("Player 2 is correct!");
+//                    targetTime = 6.0f;
+//                    hasPlayerAnsweredCorrect = true;
+//                    hasPlayer2Answered = true;
+//                    shouldTimerRun = true;
+//                    player2Score++;
+//                }
+//                //if wrong
+//                else
+//                {
+//                    hasPlayer2Answered = true;
+//                    Debug.Log("Player 2 is wrong!");
+//                }
+//            }
+//            break;
+//        default:
+//            Debug.Log("something went REALLY wrong??");
+//            break;
+//    }
+
+//    if(hasPlayer1Answered && hasPlayer2Answered)
+//    {
+//        hasPlayer1Answered = false;
+//        hasPlayer2Answered = false;
+//        targetTime = 6.0f;
+//        shouldTimerRun = true;
+//    }
+//}
+
