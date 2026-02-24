@@ -7,6 +7,7 @@ public class TugPlayer : MonoBehaviour
     private GameObject tugManager;
     private TugManager tM;
     public int playerNumber;
+    [SerializeField] GameObject tutorialHolder;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -53,5 +54,14 @@ public class TugPlayer : MonoBehaviour
     public void P2Right(InputAction.CallbackContext context)
     {
         tM.Player2Answer(3);
+    }
+
+    public void FinishTutorial(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Time.timeScale = 1f;
+            tutorialHolder.SetActive(false);
+        }
     }
 }

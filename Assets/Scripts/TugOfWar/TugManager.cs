@@ -25,6 +25,7 @@ public class TugManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 0f;
         arrowSpriteRenderer = arrowSpawnPoint.GetComponent<SpriteRenderer>();
         arrowSpriteRenderer.sprite = arrowSprites[4];
     }
@@ -89,6 +90,9 @@ public class TugManager : MonoBehaviour
                 shouldTimerRun = true;
                 player1Score++;
                 tUIM.UpdateScores(player1Score, player2Score);
+                if(player1Score >= 5 || player2Score >= 5)
+                    GameFinished();
+
                 ResetInputs();
             }
             //if wrong?
@@ -123,6 +127,8 @@ public class TugManager : MonoBehaviour
                 shouldTimerRun = true;
                 player2Score++;
                 tUIM.UpdateScores(player1Score, player2Score);
+                if (player1Score >= 5 || player2Score >= 5)
+                    GameFinished();
                 ResetInputs();
             }
             //if wrong
@@ -172,6 +178,11 @@ public class TugManager : MonoBehaviour
                 Debug.Log("something went REALLY wrong??");
                 break;
         }
+    }
+
+    void GameFinished()
+    {
+
     }
 }
 
