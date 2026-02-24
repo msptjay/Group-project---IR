@@ -13,7 +13,7 @@ public class PlinkoManager : MonoBehaviour
     [SerializeField] GameObject[] Berries;
     [SerializeField] GameObject plinkoUIManager;
     [SerializeField] PlinkoUIManager pUIM;
-    int secondsLeft = 30;
+    int secondsLeft = 45;
     float targetTime = 1;
 
     public int p1Score;
