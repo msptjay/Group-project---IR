@@ -9,7 +9,8 @@ public class BouncyBallUI : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI timer;
     [SerializeField] private float timerCountdown;
-    [SerializeField] GameManager gm;
+    [SerializeField] BallSpawner bS;
+
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class BouncyBallUI : MonoBehaviour
         timer.text = "Timer : " + timerCountdown;
         if (timerCountdown <= 0f)
         {
-            gm.LoadNextLevel();
+            bS.GameFinished();
         }
     }
 

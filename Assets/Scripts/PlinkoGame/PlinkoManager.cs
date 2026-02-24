@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 
 public class PlinkoManager : MonoBehaviour
 {
+    GameObject gameManager;
+    GameManager gM;
+
     float spawnTime = 5;
     float difficultyRamp = 0;
     [SerializeField] Transform[] berrySpawns;
@@ -18,6 +21,8 @@ public class PlinkoManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameManager = GameObject.FindWithTag("GameManager");
+        gM = gameManager.GetComponent<GameManager>();
         Time.timeScale = 0f;
         StartCoroutine(SpawnBerry());
     }
@@ -32,6 +37,10 @@ public class PlinkoManager : MonoBehaviour
             secondsLeft--;
             pUIM.UpdateTimer(secondsLeft);
             targetTime = 1.0f;
+            if(secondsLeft <= 0)
+            {
+                GameFinished();
+            }
         }
 
     }
@@ -44,7 +53,7 @@ public class PlinkoManager : MonoBehaviour
             Instantiate(Berries[Random.Range(2,4)], (berrySpawns[Random.Range(2,4)].position), Quaternion.identity);
             difficultyRamp += 0.5f;
             if (difficultyRamp % 1 == 0 && spawnTime > 2)
-                spawnTime -= 0.5f;
+                spawnTime -= 0.75f;
             
             yield return new WaitForSeconds(spawnTime);
         }
@@ -62,5 +71,8 @@ public class PlinkoManager : MonoBehaviour
         pUIM.UpdateScores(p1Score, p2Score);
     }
 
-    
+    public void GameFinished()
+    { 
+        gM.LevelEnded(p1Score, p2Score); 
+    }
 }

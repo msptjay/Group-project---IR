@@ -41,6 +41,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "3becbd32-87e4-4387-92f5-956dc4cc4ef4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -85,6 +94,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "IA GameP Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "03549e23-0aad-42f1-8d05-24cfe7842c2e",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

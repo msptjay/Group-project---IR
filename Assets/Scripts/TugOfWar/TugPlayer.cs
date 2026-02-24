@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.Progress;
 
 public class TugPlayer : MonoBehaviour
 {
     private GameObject tugManager;
     private TugManager tM;
     public int playerNumber;
+    [SerializeField] GameObject tutorialHolder;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,18 +24,44 @@ public class TugPlayer : MonoBehaviour
     //input slop, probably not optimal at all!! too bad !!!
     public void Up(InputAction.CallbackContext context)
     {
-        tM.PlayerInput(playerNumber, 0);
+        tM.Player1Answer(0);
+    }
+
+    public void P2Up(InputAction.CallbackContext context)
+    {
+        tM.Player2Answer(0);
     }
     public void Down(InputAction.CallbackContext context)
     {
-        tM.PlayerInput(playerNumber, 1);
+        tM.Player1Answer(1);
+    }
+    public void P2Down(InputAction.CallbackContext context)
+    {
+        tM.Player2Answer(1);
     }
     public void Left(InputAction.CallbackContext context)
     {
-        tM.PlayerInput(playerNumber, 2);
+        tM.Player1Answer(2);
+    }
+    public void P2Left(InputAction.CallbackContext context)
+    {
+        tM.Player2Answer(2);
     }
     public void Right(InputAction.CallbackContext context)
     {
-        tM.PlayerInput(playerNumber, 3);
+        tM.Player1Answer(3);
+    }
+    public void P2Right(InputAction.CallbackContext context)
+    {
+        tM.Player2Answer(3);
+    }
+
+    public void FinishTutorial(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Time.timeScale = 1f;
+            tutorialHolder.SetActive(false);
+        }
     }
 }

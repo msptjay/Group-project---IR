@@ -1013,34 +1013,6 @@
             ]
         },
         {
-            "name": "TugOfWar",
-            "id": "9197a1db-a605-4bc6-8bd9-46c92b2e16c6",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "aa5d4701-97cd-4f21-9ae6-fa1c9bb52cfb",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "80717da6-1c58-41e2-9cef-78f6109fd33b",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
             "name": "Plinko",
             "id": "dc46223c-be4c-4759-99e9-1f2bbcb70cc6",
             "actions": [
@@ -1125,6 +1097,94 @@
                     "processors": "",
                     "groups": "",
                     "action": "TutorialEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Tug of War",
+            "id": "0082d09b-a0f5-400e-be89-4091a46a8394",
+            "actions": [
+                {
+                    "name": "Up",
+                    "type": "Button",
+                    "id": "c5c824e6-63e8-48ed-af24-fe052fbf075c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Down",
+                    "type": "Button",
+                    "id": "b7bdab81-66a0-4b25-ac93-f83bd86df177",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left",
+                    "type": "Button",
+                    "id": "067d51ec-7e18-4299-8bc2-5ccf66ef23aa",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right",
+                    "type": "Button",
+                    "id": "d924bdc1-51ff-47fc-9039-26a763aab8e2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "91adceae-045f-41ac-9651-cbeb4833ffa4",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e3d6020e-f769-4d83-896e-dc45921765db",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fe417ebb-7abc-4d50-98db-bb3db227bae5",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "67998ef1-50ec-4f5c-bd84-4f11f827791a",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

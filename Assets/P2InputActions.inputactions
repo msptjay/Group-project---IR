@@ -1017,9 +1017,36 @@
             "id": "9197a1db-a605-4bc6-8bd9-46c92b2e16c6",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Up",
                     "type": "Button",
                     "id": "aa5d4701-97cd-4f21-9ae6-fa1c9bb52cfb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Down",
+                    "type": "Button",
+                    "id": "37e6d0cc-f104-4e7e-a1e0-0e59918513f1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right",
+                    "type": "Button",
+                    "id": "6979a82e-65f1-4b2e-995e-8b4c8d667c9f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left",
+                    "type": "Button",
+                    "id": "0d6ab925-6b78-4337-a4bd-03779d58dfa4",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1030,11 +1057,66 @@
                 {
                     "name": "",
                     "id": "80717da6-1c58-41e2-9cef-78f6109fd33b",
-                    "path": "",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f5208a67-6ea3-4a90-b02f-ec9ea96326a7",
+                    "path": "<XInputController>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ffc3db2a-9a22-466a-bc14-1a05187103f8",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "73586fa2-9ec8-4490-9f24-18169fa7c06a",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9fa891de-35ca-4058-853a-1686f643fe2a",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1408b091-e1ad-4d87-80ca-57a3eb4f816d",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

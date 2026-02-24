@@ -16,7 +16,9 @@ TagManager:
   - PlinkoManager
   - Ground
   - TutorialHolder
-  - Fruit
+  - P1OverallScore
+  - P2OverallScore
+  - GameManager
   layers:
   - Default
   - TransparentFX
