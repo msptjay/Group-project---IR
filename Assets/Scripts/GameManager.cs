@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,8 @@ public class GameManager : MonoBehaviour
     public int overallP2Score;
     //set minigame names through editor
     [SerializeField] string[] minigameNames;
+    [SerializeField] TextMeshProUGUI p1ScoreText;
+    [SerializeField] TextMeshProUGUI p2ScoreText;
 
     GameObject TutorialHolder;
     void Start()
@@ -16,7 +19,10 @@ public class GameManager : MonoBehaviour
     }
     void Awake()
     {
-      
+        p1ScoreText = GameObject.FindWithTag("P1OverallScore").GetComponent<TextMeshProUGUI>();
+        p2ScoreText = GameObject.FindWithTag("P2OverallScore").GetComponent<TextMeshProUGUI>();
+        p1ScoreText.text = overallP1Score.ToString();
+        p2ScoreText.text = overallP2Score.ToString();
     }
 
     public void LoadNextLevel()
@@ -48,5 +54,6 @@ public class GameManager : MonoBehaviour
         {
             overallP2Score++;
         }
+        LoadNextLevel();
     }
 }

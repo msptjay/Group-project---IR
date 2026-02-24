@@ -28,7 +28,8 @@ public class PlinkoFruit : MonoBehaviour
                     pM.AddScore(1, true);
                     Destroy(gameObject);
                 }
-                
+                else 
+                    Destroy(gameObject);
                 break;
             case "StrB Box":
                 if (FruitType == 1)
@@ -36,6 +37,8 @@ public class PlinkoFruit : MonoBehaviour
                     pM.AddScore(1, true);
                     Destroy(gameObject);
                 }
+                else
+                    Destroy(gameObject);
                 break;
             case "CraB Box":
                 if (FruitType == 2)
@@ -43,6 +46,8 @@ public class PlinkoFruit : MonoBehaviour
                     pM.AddScore(1, false);
                     Destroy(gameObject);
                 }
+                else
+                    Destroy(gameObject);
                 break;
             case "BlaB Box":
                 if (FruitType == 3)
@@ -50,6 +55,8 @@ public class PlinkoFruit : MonoBehaviour
                     pM.AddScore(1, false);
                     Destroy(gameObject);
                 }
+                else
+                    Destroy(gameObject);
                 break;
             case "Ground":
                 Destroy(gameObject);

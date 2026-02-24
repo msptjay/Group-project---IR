@@ -4,6 +4,9 @@ using UnityEngine.Windows;
 
 public class TugManager : MonoBehaviour
 {
+    GameObject gameManager;
+    GameManager gM;
+
     public float targetTime = 6.0f;
 
     //0= up, 1= down, 2= left, 3= right
@@ -25,6 +28,8 @@ public class TugManager : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GameObject.FindWithTag("GameManager");
+        gM = gameManager.GetComponent<GameManager>();
         Time.timeScale = 0f;
         arrowSpriteRenderer = arrowSpawnPoint.GetComponent<SpriteRenderer>();
         arrowSpriteRenderer.sprite = arrowSprites[4];
@@ -182,7 +187,7 @@ public class TugManager : MonoBehaviour
 
     void GameFinished()
     {
-
+        gM.LevelEnded(player1Score, player2Score);
     }
 }
 

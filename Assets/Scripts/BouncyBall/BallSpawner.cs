@@ -3,6 +3,9 @@ using UnityEngine;
 using TMPro;
 public class BallSpawner : MonoBehaviour
 {
+    GameObject gameManager;
+    GameManager gM;
+
     [SerializeField] Rect rectangleSpawns;
     [SerializeField] GameObject ball;
     [SerializeField] BouncyBallUI bouncyBallUI;
@@ -18,14 +21,14 @@ public class BallSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameManager = GameObject.FindWithTag("GameManager");
+        gM = gameManager.GetComponent<GameManager>();
+
         StartCoroutine(SpawnBallCoroutine());
         for (int i = 0; i < 10; i++)
         {
             SpawnBall();
         }
-
-        
-       
     }
 
     // Update is called once per frame
@@ -62,5 +65,8 @@ public class BallSpawner : MonoBehaviour
         bouncyBallUI.UpdateScore(player1Score, player2Score);
     }
 
-    //AFTER THE TIMER OF THE GAME RUNS OUT - SEE WHO HAS MOST SCORE
+    public void GameFinished()
+    {
+        gM.LevelEnded(player1Score, player2Score);
+    }
 }
