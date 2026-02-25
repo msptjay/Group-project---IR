@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Fruit_Stuff : MonoBehaviour
 {
-    [SerializeField] private int damage = 1;
+    
     private ColumnManager manager;
 
     private void OnCollisionEnter2D(Collision2D collision)
