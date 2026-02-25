@@ -307,9 +307,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1234745528}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayButton
+      - m_Target: {fileID: 1028713704}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LoadNextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -678,6 +678,7 @@ MonoBehaviour:
   overallP1Score: 0
   overallP2Score: 0
   minigameNames:
+  - WatchOut
   - BouncyBall
   - PlinkoSort
   - TugOfWar

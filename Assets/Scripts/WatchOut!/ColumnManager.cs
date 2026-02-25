@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class ColumnManager : MonoBehaviour
 {
+    GameObject gameManager;
+    GameManager gM;
+    
     [Header("World stuff")] [SerializeField]
     private Transform[] columns;
 
@@ -12,10 +15,7 @@ public class ColumnManager : MonoBehaviour
     [SerializeField] private GameObject branchPrefab;
     [SerializeField] private GameObject fruitPrefab;
     [SerializeField] private TextMeshProUGUI countdown;
-    [SerializeField] private GameManager gm;
-
-//    [SerializeField] private TextMeshProUGUI playerHealth1;
-    // [SerializeField] private TextMeshProUGUI playerHealth2;
+    
     [SerializeField] private float timerCountdown;
     [SerializeField] private float timerCooldown;
     [SerializeField] private PlayerHealth player;
@@ -25,20 +25,29 @@ public class ColumnManager : MonoBehaviour
 
     [SerializeField] private  PlayerInput playerInput;
     [SerializeField] private PlayerInput playerInput2;
-    private void Start()
+    void Start()
     {
-        timerCountdown = 10f;
-        StartCoroutine(Countdown());
-      //  timerCountdown = 10f;
-       StartRound();
+      gameManager = GameObject.FindWithTag("GameManager");
+      gM = gameManager.GetComponent<GameManager>();
+      StartRound();
+      timerCountdown = 10f;
+      StartCoroutine(Countdown());
+      
+       
     }
 
     private void Update()
     {
         if (!roundActive) return;
-        
+
+        if (player.HealthStatus() <= 0)
+        {
+            gM.LoadNextLevel();
+        }
 
     }
+
+    
 
     IEnumerator Countdown()
     {
