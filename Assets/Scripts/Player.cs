@@ -21,8 +21,8 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         health = healthMax;
-        gameManager = GameObject.Find("GameManager");
-        gM = gameManager.GetComponent<GameManager>();
+     //   gameManager = GameObject.Find("GameManager");
+//        gM = gameManager.GetComponent<GameManager>();
     }
 
     private void FixedUpdate()
