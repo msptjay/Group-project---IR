@@ -14,13 +14,11 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 10f;
-    [SerializeField] private int healthMax = 10;
-    [SerializeField] private int health;
     private float horizontal;
 
     private void Awake()
     {
-        health = healthMax;
+      
      //   gameManager = GameObject.Find("GameManager");
 //        gM = gameManager.GetComponent<GameManager>();
     }
