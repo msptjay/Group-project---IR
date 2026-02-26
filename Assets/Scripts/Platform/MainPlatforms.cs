@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 using System.Collections;
@@ -8,42 +9,61 @@ public class MainPlatforms : MonoBehaviour
     [SerializeField] private bool isTriggered = false;
     [Header("Timers")] [SerializeField] private float startingPlatTime;
     
-    [SerializeField] private float mainTimer;
-
+    [SerializeField] private float currentTimer;
+    private Coroutine countdownRoutine;
     [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
-    
+
+
+    public void Awake()
+    {
+        currentTimer = disappearDelay;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!isTriggered && collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            isTriggered = true;
-            StartCoroutine(collisionCountdown());
+            if (!isTriggered)
+            {
+                isTriggered = true;
+                countdownRoutine = StartCoroutine(collisionCountdown());
+            }
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (isTriggered && collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            isTriggered = false;
+            if (isTriggered)
+            {
+                isTriggered = false;
+                currentTimer += 1f;
+            
+                currentTimer = Mathf.Min(currentTimer, disappearDelay);
+            }
+          
         }
     }
 
     IEnumerator collisionCountdown()
     {
-        float timer = disappearDelay;
+       
 
-        while (isTriggered)  
+        while (currentTimer > 0) 
         {
-            timer -= Time.deltaTime;
-            mainPlatforms.text = "" + timer;
-            if (timer <= 0)
+            if (isTriggered)
             {
-                Destroy(gameObject);
-                yield break;
+                currentTimer -= Time.deltaTime;
+                mainPlatforms.text = "" + currentTimer;
                 
+                if (currentTimer <= 0)
+                {
+                    Destroy(gameObject);
+                    yield break;
+                
+                }
             }
-
             yield return null;
         }
             
