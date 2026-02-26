@@ -4,46 +4,105 @@ using System.Collections;
 
 public class Platforms : MonoBehaviour
 {
-    [SerializeField] private float timeCountdown;
+    [Header("Objects")] [SerializeField] private GameObject[] platforms;
     [SerializeField] private GameObject startingPlatform;
-    [SerializeField] private float startingPlatTime;
+    [SerializeField] private float disappearDelay = 3f;
+    [SerializeField] private bool isTriggered = false;
+    [Header("Timers")] [SerializeField] private float startingPlatTime;
+    [SerializeField] private float mainTimer;
+
+    [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
     [SerializeField] private TextMeshProUGUI platform1;
 
     public void Start()
     {
+        mainTimer = 35f;
         startingPlatTime = 5f;
         StartCoroutine(startingCountdown());
 
     }
 
+
     public void Update()
     {
 
-        platform1.text = "Timer: " + startingPlatTime;
-        startingPlatTime -= Time.deltaTime;
+    }
 
-        if (startingPlatTime <= 0)
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!isTriggered && collision.gameObject.tag == "Player")
         {
-            Destroy(startingPlatform);
-            Destroy(platform1);
+            isTriggered = true;
+            StartCoroutine(collisionCountdown());
         }
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (isTriggered && collision.gameObject.tag == "Player")
+        {
+            isTriggered = false;
+        }
+    }
+
+    IEnumerator collisionCountdown()
+        {
+            while (true)
+            {
+                float timer = disappearDelay;
+                while (timer > 0)
+                {
+                    timer -= Time.deltaTime;
+                    yield return null;
+                }
+
+                if (timer <= 0)
+                {
+                    Destroy(gameObject);
+                    yield return null;
+                }
+            }
+            
+     }
 
     IEnumerator startingCountdown()
     {
         while (true)
         {
             float timer = startingPlatTime;
+            float timer1 = mainTimer;
+            
             while (timer > 0)
             {
                 platform1.text = "Timer: " + timer;
                 timer -= Time.deltaTime;
                 yield return null;
             }
+           
+            Destroy(platform1);
+            Destroy(startingPlatform);
+            while (timer1 > 0)
+            {
+                mainPlatforms.text = "Timer: " + timer1;
+                timer1 -= Time.deltaTime;
+                if (timer1 <= 0)
+                {
+                    
+                }
+                yield return null;
+            }
+            
+
 
         }
 
-
+        IEnumerator Platforms()
+        {
+            while (true)
+            {
+                
+            }
+        }
 
 
 
