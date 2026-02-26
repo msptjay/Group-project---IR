@@ -36,11 +36,12 @@ public class MainPlatforms : MonoBehaviour
         while (isTriggered)  
         {
             timer -= Time.deltaTime;
-
+            mainPlatforms.text = "" + timer;
             if (timer <= 0)
             {
                 Destroy(gameObject);
-                yield break;   
+                yield break;
+                
             }
 
             yield return null;
