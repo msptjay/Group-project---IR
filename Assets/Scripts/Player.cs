@@ -12,16 +12,18 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform groundCheck;
 
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpForce;
     private float horizontal;
 
     private void Awake()
     {
-      
-     //   gameManager = GameObject.Find("GameManager");
+
+    jumpForce = 10f;
+    moveSpeed = 5f;
+    //   gameManager = GameObject.Find("GameManager");
 //        gM = gameManager.GetComponent<GameManager>();
-    }
+}
 
     private void FixedUpdate()
     {
