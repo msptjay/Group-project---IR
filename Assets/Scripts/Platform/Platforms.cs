@@ -6,13 +6,16 @@ using System.Collections;
 public class Platforms : MonoBehaviour
 {
     [Header("Objects")] [SerializeField] private GameObject[] platforms;
+    
     [SerializeField] private GameObject startingPlatform;
     [SerializeField] private float disappearDelay = 3f;
     [SerializeField] private bool isTriggered = false;
     [Header("Timers")] [SerializeField] private float startingPlatTime;
+    
     [SerializeField] private float mainTimer;
 
     [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
+    
     [SerializeField] private TextMeshProUGUI platform1;
 
     public void Start()
@@ -28,7 +31,7 @@ public class Platforms : MonoBehaviour
     {
 
     }
-
+/*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!isTriggered && collision.gameObject.tag == "Player")
@@ -65,7 +68,7 @@ public class Platforms : MonoBehaviour
             }
             
      }
-
+*/
     IEnumerator startingCountdown()
     {
         while (true)
@@ -96,16 +99,6 @@ public class Platforms : MonoBehaviour
 
 
         }
-
-        IEnumerator Platforms()
-        {
-            while (true)
-            {
-                
-            }
-        }
-
-
-
+        
     }
 }
