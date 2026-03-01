@@ -7,19 +7,33 @@ using UnityEngine.UI;
 
 public class MainPlatforms : MonoBehaviour
 {
+    GameObject gameManager;
+    GameManager gM;
+
     [SerializeField] private GameObject Platform;
     [SerializeField] private float disappearDelay = 3f;
     [SerializeField] private bool isTriggered = false;
     [Header("Timers")] [SerializeField] private float startingPlatTime;
-    
+    [SerializeField] private PlayerHealth player;
     [SerializeField] private float currentTimer;
     private Coroutine countdownRoutine;
     [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
 
 
-    public void Awake()
+    public void Start()
     {
+      //  gameManager = GameObject.FindWithTag("GameManager");
+      //  gM = gameManager.GetComponent<GameManager>();
+        
         currentTimer = disappearDelay;
+    }
+
+    private void Update()
+    {
+        if (player.HealthStatus() <= 0)
+        {
+          //  gM.LoadNextLevel();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
