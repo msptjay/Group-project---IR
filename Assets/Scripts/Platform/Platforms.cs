@@ -20,7 +20,7 @@ public class Platforms : MonoBehaviour
 
     public void Start()
     {
-        mainTimer = 35f;
+        mainTimer = 45f;
         startingPlatTime = 5f;
         StartCoroutine(startingCountdown());
 
