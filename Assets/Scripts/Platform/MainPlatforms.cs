@@ -2,6 +2,9 @@ using System;
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
+
+
 public class MainPlatforms : MonoBehaviour
 {
     [SerializeField] private GameObject Platform;
@@ -60,6 +63,7 @@ public class MainPlatforms : MonoBehaviour
                 if (currentTimer <= 0)
                 {
                     Destroy(gameObject);
+                    mainPlatforms.gameObject.SetActive(false);
                     yield break;
                 
                 }
