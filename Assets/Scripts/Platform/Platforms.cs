@@ -5,6 +5,8 @@ using System.Collections;
 
 public class Platforms : MonoBehaviour
 {
+    GameObject gameManager;
+    GameManager gM;
     [Header("Objects")] [SerializeField] private GameObject[] platforms;
     
     [SerializeField] private GameObject startingPlatform;
@@ -13,13 +15,15 @@ public class Platforms : MonoBehaviour
     [Header("Timers")] [SerializeField] private float startingPlatTime;
     
     [SerializeField] private float mainTimer;
-
+    [SerializeField] private PlayerHealth player;
     [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
     
     [SerializeField] private TextMeshProUGUI platform1;
 
     public void Start()
     {
+        //  gameManager = GameObject.FindWithTag("GameManager");
+        //  gM = gameManager.GetComponent<GameManager>();
         mainTimer = 45f;
         startingPlatTime = 5f;
         StartCoroutine(startingCountdown());
@@ -29,7 +33,10 @@ public class Platforms : MonoBehaviour
 
     public void Update()
     {
-
+        if (player.HealthStatus() <= 0)
+        {
+            //  gM.LoadNextLevel();
+        }
     }
 /*
     private void OnCollisionEnter2D(Collision2D collision)
