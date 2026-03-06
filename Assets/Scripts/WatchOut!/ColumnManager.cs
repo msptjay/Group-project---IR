@@ -7,6 +7,9 @@ public class ColumnManager : MonoBehaviour
 {
     GameObject gameManager;
     GameManager gM;
+
+    public int p1Score;
+    public int p2Score;
     
     [Header("World stuff")] [SerializeField]
     private Transform[] columns;
@@ -132,17 +135,21 @@ public void LockedInSpot(int column)
     
     
 
-   /* private void LockPlayer()
+  public void AddScore(int score, bool P1score)
     {
-        if (timerCountdown <= 0f && gameObject.CompareTag("Player"))
+        if (P1score)
         {
-            inPlace = true;
-            Debug.Log("You have cooked!");
+            p1Score += score;
         }
         else
         {
-            inPlace = false;
-            Debug.Log("You haven't made it in time :(");
+            p2Score += score;
         }
-    } */
+       // pUIM.UpdateScores(p1Score, p2Score);
+    }
+
+    public void GameFinished()
+    { 
+        gM.LevelEnded(p1Score, p2Score); 
+    }
 }

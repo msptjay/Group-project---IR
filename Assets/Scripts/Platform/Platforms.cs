@@ -24,8 +24,8 @@ public class Platforms : MonoBehaviour
     {
         //  gameManager = GameObject.FindWithTag("GameManager");
         //  gM = gameManager.GetComponent<GameManager>();
-        mainTimer = 45f;
-        startingPlatTime = 5f;
+        mainTimer = 46f;
+        startingPlatTime = 6f;
         StartCoroutine(startingCountdown());
 
     }
@@ -85,7 +85,7 @@ public class Platforms : MonoBehaviour
             
             while (timer > 0)
             {
-                platform1.text = "Timer: " + timer;
+               platform1.text = "Timer: " + Mathf.FloorToInt(timer);
                 timer -= Time.deltaTime;
                 yield return null;
             }
@@ -94,7 +94,7 @@ public class Platforms : MonoBehaviour
             Destroy(startingPlatform);
             while (timer1 > 0)
             {
-                mainPlatforms.text = "Timer: " + timer1;
+                mainPlatforms.text = "Timer: " + Mathf.FloorToInt(timer1);
                 timer1 -= Time.deltaTime;
                 if (timer1 <= 0)
                 {

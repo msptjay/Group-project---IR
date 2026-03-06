@@ -494,6 +494,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
+  p1Score: 0
+  p2Score: 0
   Platform: {fileID: 2141056545}
   disappearDelay: 3
   isTriggered: 0
@@ -771,6 +773,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
+  p1Score: 0
+  p2Score: 0
   Platform: {fileID: 417481992}
   disappearDelay: 3
   isTriggered: 0
@@ -1360,7 +1364,7 @@ GameObject:
   - component: {fileID: 753539566}
   - component: {fileID: 753539565}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Main TImer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2317,6 +2321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
+  p1Score: 0
+  p2Score: 0
   Platform: {fileID: 1022907924}
   disappearDelay: 3
   isTriggered: 0
@@ -2354,6 +2360,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
+  p1Score: 0
+  p2Score: 0
   Platform: {fileID: 1028667770}
   disappearDelay: 3
   isTriggered: 0
@@ -2740,6 +2748,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
+  p1Score: 0
+  p2Score: 0
   Platform: {fileID: 1259338067}
   disappearDelay: 3
   isTriggered: 0
@@ -3546,7 +3556,7 @@ MonoBehaviour:
   isTriggered: 0
   startingPlatTime: 0
   mainTimer: 0
-  player: {fileID: 0}
+  player: {fileID: 795402462}
   mainPlatforms: {fileID: 1564686384}
   platform1: {fileID: 753539565}
 --- !u!1 &1763143686
@@ -3700,6 +3710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
+  p1Score: 0
+  p2Score: 0
   Platform: {fileID: 1763143686}
   disappearDelay: 3
   isTriggered: 0
@@ -3737,6 +3749,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
+  p1Score: 0
+  p2Score: 0
   Platform: {fileID: 1974126191}
   disappearDelay: 3
   isTriggered: 0
