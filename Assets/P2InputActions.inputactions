@@ -1211,6 +1211,45 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Counting",
+            "id": "c3de5906-09f4-4720-bd36-4af8da1251aa",
+            "actions": [
+                {
+                    "name": "Count",
+                    "type": "Button",
+                    "id": "b065504d-e785-4a00-af28-ba23cd19c82d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f004f865-0edc-481c-9394-c98085258904",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Count",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c01eace0-bf41-4c72-bb42-4da1b1527a03",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Count",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

@@ -4,6 +4,8 @@ using UnityEngine;
 public class CountingUIManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timer;
+    [SerializeField] TextMeshProUGUI p1Text;
+    [SerializeField] TextMeshProUGUI p2Text;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,4 +22,17 @@ public class CountingUIManager : MonoBehaviour
     {
         timer.text = secondsLeft.ToString();
     }
+
+    public void UpdatePlayerCounting(int playerNumber, int count)
+    {
+        if(playerNumber == 1)
+        {
+            p1Text.text = count.ToString();
+        }
+        else
+        {
+            p2Text.text = count.ToString();
+        }
+    }
+
 }
