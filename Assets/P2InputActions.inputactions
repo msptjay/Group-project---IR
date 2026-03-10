@@ -1229,17 +1229,6 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "f004f865-0edc-481c-9394-c98085258904",
-                    "path": "<Keyboard>/l",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Count",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "c01eace0-bf41-4c72-bb42-4da1b1527a03",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",

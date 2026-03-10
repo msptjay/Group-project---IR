@@ -5,21 +5,23 @@ public class CountingManager : MonoBehaviour
 {
     [SerializeField] GameObject countingUIManager;
     [SerializeField] CountingUIManager cUIM;
+    [SerializeField] GameObject ResultsDisplay;
     [SerializeField] GameObject player1;
     [SerializeField] GameObject player2;
     [SerializeField] CountingPlayer cPP1;
     [SerializeField] CountingPlayer cPP2;
-    int secondsLeft = 45;
+    int secondsLeft = 10;
     float targetTime = 1;
 
     [SerializeField] GameObject[] p1Objects;
     [SerializeField] GameObject[] p2Objects;
     int p1ObjectIndex;
     int p2ObjectIndex;
-    int p1CorrectCount;
-    int p2CorrectCount;
-    int p1TotalCount;
-    int p2TotalCount;
+    public int p1CorrectCount;
+    public int p2CorrectCount;
+    public int p1TotalCount;
+    public int p2TotalCount;
+    bool endFlag = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,12 +33,12 @@ public class CountingManager : MonoBehaviour
     {
         targetTime -= Time.deltaTime;
 
-        if (targetTime <= 0.0f)
+        if (targetTime <= 0.0f && !endFlag)
         {
             secondsLeft--;
             cUIM.UpdateTimer(secondsLeft);
             targetTime = 1.0f;
-            if (secondsLeft <= 0)
+            if (secondsLeft <= 0 && !endFlag)
             {
                 GameFinished();
             }
@@ -45,7 +47,7 @@ public class CountingManager : MonoBehaviour
 
     IEnumerator SpawnLoop()
     {
-        while (true)
+        while (!endFlag)
         {
             P1ObjectSpawn();
             P2ObjectSpawn();
@@ -76,13 +78,14 @@ public class CountingManager : MonoBehaviour
     public void p2Count()
     {
         p2TotalCount++;
-        cUIM.UpdatePlayerCounting(1, p1TotalCount);
+        cUIM.UpdatePlayerCounting(2, p2TotalCount);
     }
     void GameFinished()
     {
+        endFlag = true;
         cPP1.shouldInput = false;
         cPP2.shouldInput = false;
-        StopCoroutine(SpawnLoop());
+        ResultsDisplay.SetActive(true);
     }
 
 }
