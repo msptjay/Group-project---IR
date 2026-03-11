@@ -5,15 +5,23 @@ public class CountingManager : MonoBehaviour
 {
     [SerializeField] GameObject countingUIManager;
     [SerializeField] CountingUIManager cUIM;
-    int secondsLeft = 45;
+    [SerializeField] GameObject ResultsDisplay;
+    [SerializeField] GameObject player1;
+    [SerializeField] GameObject player2;
+    [SerializeField] CountingPlayer cPP1;
+    [SerializeField] CountingPlayer cPP2;
+    int secondsLeft = 10;
     float targetTime = 1;
 
     [SerializeField] GameObject[] p1Objects;
     [SerializeField] GameObject[] p2Objects;
     int p1ObjectIndex;
     int p2ObjectIndex;
-    int p1CorrectCount;
-    int p2CorrectCount;
+    public int p1CorrectCount;
+    public int p2CorrectCount;
+    public int p1TotalCount;
+    public int p2TotalCount;
+    bool endFlag = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,12 +33,12 @@ public class CountingManager : MonoBehaviour
     {
         targetTime -= Time.deltaTime;
 
-        if (targetTime <= 0.0f)
+        if (targetTime <= 0.0f && !endFlag)
         {
             secondsLeft--;
             cUIM.UpdateTimer(secondsLeft);
             targetTime = 1.0f;
-            if (secondsLeft <= 0)
+            if (secondsLeft <= 0 && !endFlag)
             {
                 GameFinished();
             }
@@ -39,11 +47,11 @@ public class CountingManager : MonoBehaviour
 
     IEnumerator SpawnLoop()
     {
-        while (true)
+        while (!endFlag)
         {
             P1ObjectSpawn();
             P2ObjectSpawn();
-            yield return new WaitForSeconds(Random.Range(0.1f, 0.7f));
+            yield return new WaitForSeconds(Random.Range(0.01f, 0.25f));
         }
     }
 
@@ -52,17 +60,32 @@ public class CountingManager : MonoBehaviour
         p1ObjectIndex = Random.Range(0, 3);
         if (p1ObjectIndex == 0)
             p1CorrectCount++;
-        Instantiate(p1Objects[p1ObjectIndex], new Vector2(Random.Range(2f, 8.5f), 6), Quaternion.identity);
+        Instantiate(p1Objects[p1ObjectIndex], new Vector2(Random.Range(-2f, -8.5f), 6), Quaternion.identity);
             
     }
     void P2ObjectSpawn()
     {
-
+        p2ObjectIndex = Random.Range(0, 3);
+        if (p2ObjectIndex == 0)
+            p2CorrectCount++;
+        Instantiate(p2Objects[p1ObjectIndex], new Vector2(Random.Range(2f, 8.5f), 6), Quaternion.identity);
     }
-
+    public void p1Count()
+    {
+        p1TotalCount++;
+        cUIM.UpdatePlayerCounting(1, p1TotalCount);
+    }
+    public void p2Count()
+    {
+        p2TotalCount++;
+        cUIM.UpdatePlayerCounting(2, p2TotalCount);
+    }
     void GameFinished()
     {
-
+        endFlag = true;
+        cPP1.shouldInput = false;
+        cPP2.shouldInput = false;
+        ResultsDisplay.SetActive(true);
     }
 
 }
