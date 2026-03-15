@@ -11,10 +11,12 @@ public class CountingResults : MonoBehaviour
     [SerializeField] TextMeshProUGUI p2CorrectNumber;
     [SerializeField] TextMeshProUGUI p1Text;
     [SerializeField] TextMeshProUGUI p2Text;
+    [SerializeField] TextMeshProUGUI winnerText;
     Animator animator;
     Animation anim;
     int p1IntToDisplay;
     int p2IntToDisplay;
+    int gameWinner;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,15 +35,29 @@ public class CountingResults : MonoBehaviour
     public void ScoreDisplay()
     {
         StartCoroutine(ScoreTick());
-        //for (int i = 0; i < cM.p1TotalCount; i++)
-        //{
-        //    p1Text.text = "x " + i.ToString();
-        //}
-        //for (int i = 0; i < cM.p2TotalCount; i++)
-        //{
-        //    p2Text.text = "x " + i.ToString();
-        //}
     }
+
+    public void GetWinner(int playerWin)
+    {
+        gameWinner = playerWin;
+    }
+
+    public void DisplayWinner()
+    {
+        switch(gameWinner)
+        {
+            case 1:
+                winnerText.text = "Player 1 Wins!";
+                break;
+            case 2:
+                winnerText.text = "Player 2 Wins!";
+                break;
+            case 0:
+                winnerText.text = "It's a Tie!";
+                break;
+        }
+    }
+    
 
     IEnumerator ScoreTick()
     {
@@ -66,7 +82,7 @@ public class CountingResults : MonoBehaviour
                 p2Text.text = "x " + p2IntToDisplay.ToString();
             }
 
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
         }
     }    
 }
