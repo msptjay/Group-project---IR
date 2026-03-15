@@ -1,5 +1,7 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+
 
 public class CountingManager : MonoBehaviour
 {
@@ -85,7 +87,31 @@ public class CountingManager : MonoBehaviour
         endFlag = true;
         cPP1.shouldInput = false;
         cPP2.shouldInput = false;
+        int p1Difference = FindDifference(p1TotalCount, p1CorrectCount);
+        int p2Difference = FindDifference(p2TotalCount, p2CorrectCount);
+        if (p1Difference < p2Difference)
+        {
+            ResultsDisplay.GetComponent<CountingResults>().GetWinner(1);
+            Debug.Log("Player 1 Wins!");
+            //game manager p1 win
+        }
+        if(p2Difference < p1Difference)
+        {
+            ResultsDisplay.GetComponent<CountingResults>().GetWinner(2);
+            Debug.Log("Player 2 Wins!");
+            //game manager p2 win
+        }
+        if(p2Difference == p1Difference)
+        {
+            ResultsDisplay.GetComponent<CountingResults>().GetWinner(0);
+            Debug.Log("It's a tie!");
+            //game manager tie
+        }
         ResultsDisplay.SetActive(true);
     }
-
+     
+    int FindDifference(int totalCount, int correctCount)
+    {
+        return Mathf.Abs(totalCount - correctCount);
+    }
 }
