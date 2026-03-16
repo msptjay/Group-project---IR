@@ -1,39 +1,37 @@
 using UnityEngine;
-using UnityEngine.Events;
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.InputSystem;
 public class PlayerKnock : MonoBehaviour
 {
     
-[SerializeField] private float pushForce;
-[SerializeField] private float strength = 16, delay = 0.15f;
-[SerializeField] private Rigidbody2D rb2d;
+public float pushForce = 10f;
 
-public UnityEvent OnBegin, OnDone;
-public void Awake()
+    public Collider2D pushLeft;
+    public Collider2D pushRight;
 
-{
-    pushForce = 5f;
-}
+    
 
 
-public void PlayerFeedback(GameObject hitbox)
-{
-    StopAllCoroutines();
-    OnBegin?.Invoke();
-    Vector2 direction = (transform.position - hitbox.transform.position).normalized;
-    rb2d.AddForce(direction * pushForce, ForceMode2D.Impulse);
-    StartCoroutine(Reset());
-}
+    public void OnPush(InputAction.CallbackContext context)
+    {
+        PushAttack(pushLeft, Vector2.left);
+        PushAttack(pushRight, Vector2.right);
+    }
+    void PushAttack(Collider2D box, Vector2 direction)
+    {
+        Collider2D[] hits = Physics2D.OverlapBoxAll(box.bounds.center, box.bounds.size, 0f);
 
-private IEnumerator Reset()
-{
-    yield return new WaitForSeconds(delay);
-    rb2d.velocity = Vector3.zero;
-    OnDone?.Invoke();
-}
-
-
+        foreach (Collider2D hit in hits)
+        {
+            if (hit.CompareTag("Player") && hit.gameObject != gameObject)
+            {
+                Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    rb.AddForce(direction * pushForce, ForceMode2D.Impulse);
+                }
+            }
+        }
+    }
 
 }
 

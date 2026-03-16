@@ -95,6 +95,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Push",
+                    "type": "Button",
+                    "id": "ba158c07-3f21-4f91-be63-fa01499889b3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -491,6 +500,28 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd266264-2a9c-47ee-8307-a636b7a19277",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Push",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "78c270bb-bc5c-4938-bd4d-48ee260193a8",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Push",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1224,6 +1255,34 @@
                     "processors": "",
                     "groups": "",
                     "action": "Count",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Platformer",
+            "id": "23be03f2-2b5f-488e-ab75-744e844da19b",
+            "actions": [
+                {
+                    "name": "OnPush",
+                    "type": "Button",
+                    "id": "dadcc7f4-c717-4c0a-a0d4-392dddfca238",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f0973f29-7157-44c6-8fcd-dcf6bd02e382",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "OnPush",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
