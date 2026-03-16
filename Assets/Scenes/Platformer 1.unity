@@ -1074,6 +1074,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f37be0f9-e0b8-4b1f-9881-d85a686e91aa
     m_ActionName: Plinko/TutorialEnd
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b065504d-e785-4a00-af28-ba23cd19c82d
+    m_ActionName: Counting/Count
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
@@ -1360,7 +1364,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 795402463}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -1392,7 +1396,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Crouch[/Keyboard/c]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 795402463}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
@@ -1490,6 +1494,18 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: d924bdc1-51ff-47fc-9039-26a763aab8e2
     m_ActionName: Tug of War/Right
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ba158c07-3f21-4f91-be63-fa01499889b3
+    m_ActionName: Player/Push
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e9d0e250-d671-49ac-a901-f8bbe4655d3a
+    m_ActionName: Counting/Count
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dadcc7f4-c717-4c0a-a0d4-392dddfca238
+    m_ActionName: Platformer/OnPush
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
