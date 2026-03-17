@@ -2,14 +2,15 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerKnock : MonoBehaviour
 {
-    
+
     public float pushForce = 10f;
 
-    public Collider2D pushLeft;
-    public Collider2D pushRight;
+    public BoxCollider2D pushLeft;
+    public BoxCollider2D pushRight;
 
+    private Rigidbody2D targetRb;
 
+    
 }
-
 
 

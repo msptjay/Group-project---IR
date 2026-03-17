@@ -506,7 +506,7 @@
                 {
                     "name": "",
                     "id": "cd266264-2a9c-47ee-8307-a636b7a19277",
-                    "path": "<XInputController>/buttonSouth",
+                    "path": "<XInputController>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -521,6 +521,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
+                    "action": "Push",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b9efa6f4-df27-4fe4-9246-a8e9743faa03",
+                    "path": "<NimbusGamepadHid>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
                     "action": "Push",
                     "isComposite": false,
                     "isPartOfComposite": false
