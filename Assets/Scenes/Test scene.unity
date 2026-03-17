@@ -286,12 +286,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8677e16b9480b2498f91a22d5f34839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  score: -1
+  overallP1Score: 0
+  overallP2Score: 0
   minigameNames:
   - BouncyBall
   - Platformer
   - TugOfWar
   - WatchOut
+  p1ScoreText: {fileID: 0}
+  p2ScoreText: {fileID: 0}
 --- !u!4 &91481745
 Transform:
   m_ObjectHideFlags: 0
