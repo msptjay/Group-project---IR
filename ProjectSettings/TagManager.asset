@@ -19,6 +19,7 @@ TagManager:
   - P1OverallScore
   - P2OverallScore
   - GameManager
+  - Ladder
   layers:
   - Default
   - TransparentFX
