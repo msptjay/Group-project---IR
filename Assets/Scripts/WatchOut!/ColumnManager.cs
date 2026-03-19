@@ -33,7 +33,7 @@ public class ColumnManager : MonoBehaviour
       gameManager = GameObject.FindWithTag("GameManager");
       gM = gameManager.GetComponent<GameManager>();
       StartRound();
-      timerCountdown = 10f;
+      timerCountdown = 6f;
       StartCoroutine(Countdown());
       
        
@@ -61,17 +61,17 @@ public class ColumnManager : MonoBehaviour
             playerInput2.ActivateInput();
             while (timer > 0)
             {
-                countdown.text = "Timer: " + timer; 
+                countdown.text = "Timer: " + Mathf.FloorToInt(timer); 
                 timer -= Time.deltaTime;
                 yield return null;
             }
 
-            countdown.text = "Test";
+            countdown.text = "Incoming!";
             playerInput.DeactivateInput();
             playerInput2.DeactivateInput();
             SpawnBranchAndFruit();
 
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2.5f);
         }
     }
 
