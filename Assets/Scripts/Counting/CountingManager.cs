@@ -12,7 +12,7 @@ public class CountingManager : MonoBehaviour
     [SerializeField] GameObject player2;
     [SerializeField] CountingPlayer cPP1;
     [SerializeField] CountingPlayer cPP2;
-    int secondsLeft = 10;
+    int secondsLeft = 25;
     float targetTime = 1;
 
     [SerializeField] GameObject[] p1Objects;

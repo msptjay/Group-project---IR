@@ -41,12 +41,12 @@ public class BouncingBall : MonoBehaviour
             if (collision.gameObject.name == "Player")
             {
                 ownedBy = 1;
-                sr.material.SetColor("_Color", Color.green);
+                sr.material.SetColor("_Color", Color.yellow);
             }
             if (collision.gameObject.name == "Player2")
             {
                 ownedBy = 2;
-                sr.material.SetColor("_Color", Color.cornflowerBlue);
+                sr.material.SetColor("_Color", Color.mediumBlue);
             }
         }
         if(collision.gameObject.CompareTag("BouncyBall"))

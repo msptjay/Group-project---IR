@@ -22,7 +22,8 @@ public class BouncyBallUI : MonoBehaviour
     void Update()
     {
         timerCountdown -= Time.deltaTime;
-        timer.text = "Timer : " + timerCountdown;
+        int displayTime = Mathf.CeilToInt(timerCountdown);
+        timer.text = displayTime.ToString();
         if (timerCountdown <= 0f)
         {
             bS.GameFinished();

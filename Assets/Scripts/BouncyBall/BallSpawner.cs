@@ -36,7 +36,7 @@ public class BallSpawner : MonoBehaviour
 
     void SpawnBall()
     {
-        Instantiate(ball, new Vector3(Random.Range(transform.position.x - 8, transform.position.x + 8), Random.Range(transform.position.y - 5, transform.position.y + 5), 0), transform.rotation);
+        Instantiate(ball, new Vector3(Random.Range(transform.position.x - 8, transform.position.x + 8), Random.Range(transform.position.y - 5, transform.position.y + 2), 0), transform.rotation);
     }
 
     IEnumerator SpawnBallCoroutine()
