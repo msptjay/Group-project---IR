@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -122068244313234400, guid: 5d0defbfd8d455c4fbbcb852fc929153, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.78570396, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -105,7 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c6479a5ecedc1468f9aaec8f204d50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScorePopup
-  anim: {fileID: 0}
 --- !u!95 &6003321180717635788
 Animator:
   serializedVersion: 7
