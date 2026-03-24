@@ -21,6 +21,7 @@ public class TugManager : MonoBehaviour
 
     [SerializeField] int player1Score;
     [SerializeField] int player2Score;
+    int currentPosition;
 
     [SerializeField] GameObject UIManager;
     [SerializeField] TugUIManager tUIM;
@@ -93,9 +94,11 @@ public class TugManager : MonoBehaviour
                 hasPlayerAnsweredCorrect = true;
                 hasPlayer1Answered = true;
                 shouldTimerRun = true;
+                currentPosition--;
+                transform.position = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.position.z);
                 player1Score++;
                 tUIM.UpdateScores(player1Score, player2Score);
-                if(player1Score >= 5 || player2Score >= 5)
+                if(currentPosition <= -1.6 || currentPosition >= 1.6)
                     GameFinished();
 
                 ResetInputs();
@@ -130,9 +133,11 @@ public class TugManager : MonoBehaviour
                 hasPlayerAnsweredCorrect = true;
                 hasPlayer2Answered = true;
                 shouldTimerRun = true;
+                currentPosition++;
                 player2Score++;
+                transform.position = new Vector3(transform.position.x + 0.4f, transform.position.y, transform.position.z);
                 tUIM.UpdateScores(player1Score, player2Score);
-                if (player1Score >= 5 || player2Score >= 5)
+                if (currentPosition <= -1.6 || currentPosition >= 1.6)
                     GameFinished();
                 ResetInputs();
             }
