@@ -21,7 +21,7 @@ public class MainPlatforms : MonoBehaviour
     [SerializeField] private float currentTimer;
     private Coroutine countdownRoutine;
     Coroutine restoreRoutine;
-    [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
+   // [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
 
 
     public void Start()
@@ -32,7 +32,7 @@ public class MainPlatforms : MonoBehaviour
 
     private void Update()
     {
-       mainPlatforms.text = Mathf.Floor(currentTimer).ToString();
+       //mainPlatforms.text = Mathf.Floor(currentTimer).ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -88,7 +88,7 @@ public class MainPlatforms : MonoBehaviour
             if (currentTimer <= 0)
             {
               Destroy(gameObject);
-              mainPlatforms.gameObject.SetActive(false);
+              //mainPlatforms.gameObject.SetActive(false);
               countdownRoutine = null;
              yield break;
                 
