@@ -22,6 +22,7 @@ public class ColumnManager : MonoBehaviour
     [SerializeField] private float timerCountdown;
     [SerializeField] private float timerCooldown;
     [SerializeField] private PlayerHealth player;
+    [SerializeField] private PlayerHealth player2;
     [SerializeField] private bool roundActive;
     [SerializeField] private bool inPlace = false;
     [SerializeField] private int ColumnPlace = -1;
@@ -43,7 +44,7 @@ public class ColumnManager : MonoBehaviour
     {
         if (!roundActive) return;
 
-        if (player.HealthStatus() <= 0)
+        if (player.HealthStatus() <= 0 || player2.HealthStatus() <= 0)
         {
             gM.LoadNextLevel();
         }

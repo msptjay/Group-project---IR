@@ -4,8 +4,10 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 2;
     [SerializeField] private int currentHealth;
-   
- 
+    [SerializeField] GameObject UIManager;
+    [SerializeField] WatchUIManager wUIM;
+    [SerializeField] int playerNumber;
+
 
     private void Awake()
     {
@@ -21,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         Debug.Log($"{gameObject.name} health: {currentHealth}");
-
+        wUIM.UpdateScores(playerNumber, currentHealth);
         if (currentHealth <= 0)
         {
             Debug.Log($"{gameObject.name} is dead");
