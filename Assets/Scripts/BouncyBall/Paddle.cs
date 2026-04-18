@@ -10,7 +10,8 @@ public class Paddle : MonoBehaviour
 
     [SerializeField] Rigidbody2D rb;
     [SerializeField] private float moveSpeed = 50f;
-    private float horizontal;
+    public float horizontal;
+
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class Paddle : MonoBehaviour
     }
     private void FixedUpdate()
     {
+       
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
     }
 

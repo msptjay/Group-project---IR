@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
     private GameObject gameManager;
     private GameManager gM;
 
-    public GameObject firstButton, minigameFirstButton;
+    public GameObject firstButton;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
