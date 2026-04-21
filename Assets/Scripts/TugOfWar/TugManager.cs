@@ -37,6 +37,7 @@ public class TugManager : MonoBehaviour
     }
     void Update()
     {
+        tUIM.UpdateTimer(targetTime);
         //timer for picking an random button
         if (shouldTimerRun)
         {
@@ -97,8 +98,9 @@ public class TugManager : MonoBehaviour
                 currentPosition--;
                 transform.position = new Vector3(transform.position.x - 0.4f, transform.position.y, transform.position.z);
                 player1Score++;
+                player2Score--;
                 tUIM.UpdateScores(player1Score, player2Score);
-                if(currentPosition <= -1.6 || currentPosition >= 1.6)
+                if(currentPosition <= -4 || currentPosition >= 4)
                     GameFinished();
 
                 ResetInputs();
@@ -135,9 +137,10 @@ public class TugManager : MonoBehaviour
                 shouldTimerRun = true;
                 currentPosition++;
                 player2Score++;
+                player1Score--;
                 transform.position = new Vector3(transform.position.x + 0.4f, transform.position.y, transform.position.z);
                 tUIM.UpdateScores(player1Score, player2Score);
-                if (currentPosition <= -1.6 || currentPosition >= 1.6)
+                if (currentPosition <= -4 || currentPosition >= 4)
                     GameFinished();
                 ResetInputs();
             }

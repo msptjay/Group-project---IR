@@ -5,7 +5,8 @@ public class TugUIManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI p1ScoreText;
     [SerializeField] TextMeshProUGUI p2ScoreText;
-   // [SerializeField] TextMeshProUGUI timer;
+    [SerializeField] TextMeshProUGUI timerText;
+    // [SerializeField] TextMeshProUGUI timer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,5 +23,12 @@ public class TugUIManager : MonoBehaviour
     {
         p1ScoreText.text = p1Score.ToString();
         p2ScoreText.text = p2Score.ToString();
+    }
+
+    public void UpdateTimer(float time)
+    {
+        if(time < 0)
+            time = 0;
+        timerText.text = time.ToString("F2");
     }
 }
