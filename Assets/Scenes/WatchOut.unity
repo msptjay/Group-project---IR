@@ -1605,7 +1605,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   UIManager: {fileID: 1677040594}
-  wUIM: {fileID: 0}
+  wUIM: {fileID: 1677040599}
   playerNumber: 1
 --- !u!114 &379714972 stripped
 MonoBehaviour:
@@ -3245,7 +3245,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   UIManager: {fileID: 1677040594}
-  wUIM: {fileID: 0}
+  wUIM: {fileID: 1677040599}
   playerNumber: 2
 --- !u!114 &1194168631 stripped
 MonoBehaviour:
@@ -4271,7 +4271,7 @@ GameObject:
   - component: {fileID: 1603880951}
   m_Layer: 0
   m_Name: '!TEMPGAMEMANAGER'
-  m_TagString: GameManager
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4517,9 +4517,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1677040594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ee002809efbc0b2d8efdddf14912437, type: 3}
+  m_Script: {fileID: 11500000, guid: 12aa005fa0ec6c6488852c8275e32be8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlatformManager
+  m_EditorClassIdentifier: Assembly-CSharp::WatchUIManager
   p1ScoreText: {fileID: 1266892150}
   p2ScoreText: {fileID: 208050770}
 --- !u!1 &1751892074
