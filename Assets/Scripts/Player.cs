@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
 
     private bool isLadder;
     private bool isClimbing;
+    public Animator anim;
+    public int facingDirection = 1;
 
     private void Awake()
     {
@@ -31,14 +33,7 @@ public class Player : MonoBehaviour
 //        gM = gameManager.GetComponent<GameManager>();
 }
 
-    public void update()
-    {
-        vertical = Input.GetAxis("Vertical");
-        if(isLadder && Mathf.Abs(vertical) > 0)
-        {
-            isClimbing = true;
-        }
-    }
+    
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
@@ -52,6 +47,29 @@ public class Player : MonoBehaviour
         {
             rb.gravityScale = 1f;
         }
+    }
+    public void Update()
+    {
+      //  vertical = Input.GetAxis("Vertical");
+      //  if(isLadder && Mathf.Abs(vertical) > 0)
+       // {
+       //     isClimbing = true;
+       // }
+         anim.SetFloat("Speed", Mathf.Abs(horizontal));
+
+        if(horizontal > 0 && transform.localScale.x < 0 || horizontal < 0 && transform.localScale.x > 0)
+        {
+            Flip();
+        }
+        else if(horizontal < 0 && transform.localScale.x > 0)
+        {
+            Flip();
+        }
+    }
+     void Flip()
+    {
+        facingDirection *= -1;
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -96,4 +114,6 @@ public class Player : MonoBehaviour
             isClimbing = false;
         }
     }
+     
+   
 }

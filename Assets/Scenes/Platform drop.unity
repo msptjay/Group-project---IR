@@ -1983,6 +1983,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734446108}
   m_CullTransparentMesh: 1
+--- !u!1 &763205140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 763205141}
+  m_Layer: 0
+  m_Name: WaGMTempy
+  m_TagString: GameManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &763205141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763205140}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.96235, y: -0.43606, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &788632476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,7 +2166,6 @@ GameObject:
   - component: {fileID: 795402457}
   - component: {fileID: 795402463}
   - component: {fileID: 795402462}
-  - component: {fileID: 795402464}
   m_Layer: 0
   m_Name: Player Character
   m_TagString: Player
@@ -2306,7 +2336,7 @@ MonoBehaviour:
     m_ActionName: Counting/Count
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 795402464}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerKnock, Assembly-CSharp
         m_MethodName: OnPush
         m_Mode: 0
@@ -2322,7 +2352,7 @@ MonoBehaviour:
     m_ActionName: Platformer/OnPush
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 795402464}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerKnock, Assembly-CSharp
         m_MethodName: OnPush
         m_Mode: 0
@@ -2503,8 +2533,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxHealth: 2
   currentHealth: 0
-  UIManager: {fileID: 0}
-  wUIM: {fileID: 0}
+  UIManager: {fileID: 1721856794}
+  wUIM: {fileID: 1513935820}
   playerNumber: 0
 --- !u!114 &795402463
 MonoBehaviour:
@@ -2525,21 +2555,6 @@ MonoBehaviour:
   groundCheck: {fileID: 191115631}
   moveSpeed: 5
   jumpForce: 10
---- !u!114 &795402464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 795402455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e824631ce7be96d319d17160803120ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerKnock
-  pushForce: 10
-  pushLeft: {fileID: 0}
-  pushRight: {fileID: 0}
 --- !u!1 &806218153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,7 +3212,7 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   UIManager: {fileID: 1721856794}
-  wUIM: {fileID: 0}
+  wUIM: {fileID: 1513935820}
   playerNumber: 0
 --- !u!114 &1141295794
 MonoBehaviour:
@@ -4907,8 +4922,6 @@ MonoBehaviour:
   startingPlatTime: 0
   mainTimer: 0
   player: {fileID: 795402462}
-  mainPlatforms: {fileID: 0}
-  platform1: {fileID: 0}
 --- !u!1 &1840718394
 GameObject:
   m_ObjectHideFlags: 0
@@ -5442,3 +5455,4 @@ SceneRoots:
   - {fileID: 1199711278}
   - {fileID: 447334225}
   - {fileID: 330479722}
+  - {fileID: 763205141}

@@ -928,6 +928,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3060145717409812300, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 379714973}
+    - target: {fileID: 3060145717409812300, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: healthMax
       value: 10
       objectReference: {fileID: 0}
@@ -997,11 +1001,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6340238614027028429, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.346
+      value: 0.932
       objectReference: {fileID: 0}
     - target: {fileID: 6340238614027028429, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.82
+      value: 1.924
       objectReference: {fileID: 0}
     - target: {fileID: 6553040583794166901, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_Layer
@@ -1013,7 +1017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 27
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
@@ -1052,6 +1056,18 @@ PrefabInstance:
       value: d924bdc1-51ff-47fc-9039-26a763aab8e2
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[27].m_ActionId
+      value: ba158c07-3f21-4f91-be63-fa01499889b3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[28].m_ActionId
+      value: e9d0e250-d671-49ac-a901-f8bbe4655d3a
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[29].m_ActionId
+      value: dadcc7f4-c717-4c0a-a0d4-392dddfca238
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionName
       value: Player/Start
       objectReference: {fileID: 0}
@@ -1083,6 +1099,18 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[26].m_ActionName
       value: Tug of War/Right
       objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[27].m_ActionName
+      value: Player/Push
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[28].m_ActionName
+      value: Counting/Count
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[29].m_ActionName
+      value: Platformer/OnPush
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1090,6 +1118,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5039391558643926958, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 379714970}
+    - targetCorrespondingSourceObject: {fileID: 5039391558643926958, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 379714973}
   m_SourcePrefab: {fileID: 100100000, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
 --- !u!1 &293467384
 GameObject:
@@ -1425,6 +1456,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3060145717409812300, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1194168637}
     - target: {fileID: 3183144097286996269, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_Size.x
       value: 0.673
@@ -1487,11 +1522,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6340238614027028429, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.932
+      value: 1.346
       objectReference: {fileID: 0}
     - target: {fileID: 6340238614027028429, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.924
+      value: 1.82
       objectReference: {fileID: 0}
     - target: {fileID: 6553040583794166901, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_Layer
@@ -1584,6 +1619,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5039391558643926958, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1194168629}
+    - targetCorrespondingSourceObject: {fileID: 5039391558643926958, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1194168637}
   m_SourcePrefab: {fileID: 100100000, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
 --- !u!1 &379714963 stripped
 GameObject:
@@ -1618,6 +1656,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+--- !u!95 &379714973
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379714963}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1909ecf69d71da589910b8707b1665d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &466609822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3258,6 +3318,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+--- !u!95 &1194168637
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194168628}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a508a46b534391d3b536dcc1e80aefd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1227525430
 GameObject:
   m_ObjectHideFlags: 0
@@ -4271,7 +4353,7 @@ GameObject:
   - component: {fileID: 1603880951}
   m_Layer: 0
   m_Name: '!TEMPGAMEMANAGER'
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
