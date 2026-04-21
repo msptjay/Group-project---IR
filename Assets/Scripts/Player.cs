@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     //references to the game manager object and script
     private GameObject gameManager;
     private GameManager gM;
+    [SerializeField] GameObject tutorialHolder;
 
     [SerializeField] Rigidbody2D rb;
 
@@ -31,9 +32,9 @@ public class Player : MonoBehaviour
 //        gM = gameManager.GetComponent<GameManager>();
 }
 
-    public void update()
+    public void Update()
     {
-        vertical = Input.GetAxis("Vertical");
+        //vertical = Input.GetAxis("Vertical");
         if(isLadder && Mathf.Abs(vertical) > 0)
         {
             isClimbing = true;
@@ -46,7 +47,7 @@ public class Player : MonoBehaviour
         if(isClimbing)
         {
             rb.gravityScale = 0f;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, vertical * moveSpeed);
+            //rb.linearVelocity = new Vector2(rb.linearVelocity.x, vertical * moveSpeed);
         }
         else
         {
@@ -64,6 +65,14 @@ public class Player : MonoBehaviour
         if (context.performed && IsGrounded())
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+    }
+    public void FinishTutorial(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Time.timeScale = 1f;
+            tutorialHolder.SetActive(false);
         }
     }
     private bool IsGrounded()

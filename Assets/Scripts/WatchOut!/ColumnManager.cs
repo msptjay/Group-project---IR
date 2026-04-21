@@ -33,6 +33,7 @@ public class ColumnManager : MonoBehaviour
     {
       gameManager = GameObject.FindWithTag("GameManager");
       gM = gameManager.GetComponent<GameManager>();
+      Time.timeScale = 0f;
       StartRound();
       timerCountdown = 6f;
       StartCoroutine(Countdown());

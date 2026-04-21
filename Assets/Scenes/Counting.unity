@@ -408,7 +408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &97800912
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1900,7 +1900,19 @@ MonoBehaviour:
     m_ActionId: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 795108858}
+        m_TargetAssemblyTypeName: CountingPlayer, Assembly-CSharp
+        m_MethodName: FinishTutorial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: d60a2111-14ce-4bc7-8b9d-6f7089d99385
     m_ActionName: Player/Start
   - m_PersistentCalls:
@@ -2023,6 +2035,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 6266cdcb-6b13-44a0-8c09-0f1951ac4242
     m_ActionName: Player/Push
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 795108858}
+        m_TargetAssemblyTypeName: CountingPlayer, Assembly-CSharp
+        m_MethodName: FinishTutorial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e75059e4-c3e1-4ec7-afb9-f217839e66d8
+    m_ActionName: 'Counting/Start[/XInputControllerWindows2/start,/XInputControllerWindows/start]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Counting
@@ -2117,6 +2145,7 @@ MonoBehaviour:
   countingManager: {fileID: 1791084630}
   cM: {fileID: 1791084631}
   playerNumber: 2
+  tutorialHolder: {fileID: 97800911}
   shouldInput: 1
 --- !u!1 &838587688
 GameObject:
@@ -3023,7 +3052,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.71, y: 19.91}
+  m_AnchoredPosition: {x: 23.9, y: 9.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1239591484
@@ -3187,10 +3216,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3235,15 +3264,15 @@ RectTransform:
   m_Children:
   - {fileID: 1425760126}
   - {fileID: 1472654575}
+  - {fileID: 1322284518}
   - {fileID: 1579742464}
+  - {fileID: 1823416218}
+  - {fileID: 1932469882}
+  - {fileID: 988547784}
   - {fileID: 546078934}
   - {fileID: 91182841}
-  - {fileID: 1823416218}
-  - {fileID: 1322284518}
-  - {fileID: 838587689}
   - {fileID: 97800912}
-  - {fileID: 988547784}
-  - {fileID: 1932469882}
+  - {fileID: 838587689}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3422,6 +3451,7 @@ MonoBehaviour:
   countingManager: {fileID: 1791084630}
   cM: {fileID: 1791084631}
   playerNumber: 1
+  tutorialHolder: {fileID: 97800911}
   shouldInput: 1
 --- !u!114 &1336398326
 MonoBehaviour:
@@ -3453,7 +3483,19 @@ MonoBehaviour:
     m_ActionId: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1336398325}
+        m_TargetAssemblyTypeName: CountingPlayer, Assembly-CSharp
+        m_MethodName: FinishTutorial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 82312401-92c4-404e-9e3d-ee8864ab2540
     m_ActionName: Player/Start
   - m_PersistentCalls:
@@ -3580,6 +3622,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: dadcc7f4-c717-4c0a-a0d4-392dddfca238
     m_ActionName: Platformer/OnPush
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1336398325}
+        m_TargetAssemblyTypeName: CountingPlayer, Assembly-CSharp
+        m_MethodName: FinishTutorial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a175c595-6d36-4070-a15d-2a27167cb115
+    m_ActionName: 'Counting/Start[/XInputControllerWindows2/start,/XInputControllerWindows/start]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Counting

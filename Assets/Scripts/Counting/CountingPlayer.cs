@@ -6,6 +6,7 @@ public class CountingPlayer : MonoBehaviour
     [SerializeField] GameObject countingManager;
     [SerializeField] CountingManager cM;
     [SerializeField] int playerNumber;
+    [SerializeField] GameObject tutorialHolder;
     public bool shouldInput = true;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,6 +33,15 @@ public class CountingPlayer : MonoBehaviour
             {
                 cM.p2Count();
             }
+        }
+    }
+
+    public void FinishTutorial(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Time.timeScale = 1f;
+            tutorialHolder.SetActive(false);
         }
     }
 }
