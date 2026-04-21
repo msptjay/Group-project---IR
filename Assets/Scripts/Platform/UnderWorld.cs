@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class UnderWorld : MonoBehaviour
 {
-    [SerializeField] private int damage = 2;
+    [SerializeField] private int damage = 1;
     private Platforms manager;
 
     private void OnCollisionEnter2D(Collision2D collision)
