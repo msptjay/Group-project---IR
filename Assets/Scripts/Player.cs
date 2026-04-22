@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
     //references to the game manager object and script
     private GameObject gameManager;
     private GameManager gM;
-    [SerializeField] GameObject tutorialHolder;
 
     [SerializeField] Rigidbody2D rb;
 
@@ -22,6 +21,8 @@ public class Player : MonoBehaviour
 
     private bool isLadder;
     private bool isClimbing;
+    public Animator anim;
+    public int facingDirection = 1;
 
     private void Awake()
     {
@@ -32,14 +33,7 @@ public class Player : MonoBehaviour
 //        gM = gameManager.GetComponent<GameManager>();
 }
 
-    public void Update()
-    {
-        //vertical = Input.GetAxis("Vertical");
-        if(isLadder && Mathf.Abs(vertical) > 0)
-        {
-            isClimbing = true;
-        }
-    }
+    
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
@@ -47,12 +41,35 @@ public class Player : MonoBehaviour
         if(isClimbing)
         {
             rb.gravityScale = 0f;
-            //rb.linearVelocity = new Vector2(rb.linearVelocity.x, vertical * moveSpeed);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, vertical * moveSpeed);
         }
         else
         {
             rb.gravityScale = 1f;
         }
+    }
+    public void Update()
+    {
+      //  vertical = Input.GetAxis("Vertical");
+      //  if(isLadder && Mathf.Abs(vertical) > 0)
+       // {
+       //     isClimbing = true;
+       // }
+         anim.SetFloat("Speed", Mathf.Abs(horizontal));
+
+        if(horizontal > 0 && transform.localScale.x < 0 || horizontal < 0 && transform.localScale.x > 0)
+        {
+            Flip();
+        }
+        else if(horizontal < 0 && transform.localScale.x > 0)
+        {
+            Flip();
+        }
+    }
+     void Flip()
+    {
+        facingDirection *= -1;
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -65,14 +82,6 @@ public class Player : MonoBehaviour
         if (context.performed && IsGrounded())
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        }
-    }
-    public void FinishTutorial(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            Time.timeScale = 1f;
-            tutorialHolder.SetActive(false);
         }
     }
     private bool IsGrounded()
@@ -105,4 +114,6 @@ public class Player : MonoBehaviour
             isClimbing = false;
         }
     }
+     
+   
 }
