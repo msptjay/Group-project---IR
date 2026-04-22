@@ -497,8 +497,8 @@ Transform:
   m_GameObject: {fileID: 111491543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.56, y: -2.25, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 7.07, y: -2.25, z: 0}
+  m_LocalScale: {x: 2.7, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 469895849}
@@ -1012,12 +1012,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: f30e01c130ec6c748a6df54fe9b8c18c, type: 3}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_DefaultControlScheme
       value: Gamepad
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
@@ -1025,43 +1029,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionId
-      value: 82312401-92c4-404e-9e3d-ee8864ab2540
-      objectReference: {fileID: 0}
-    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[20].m_ActionId
       value: 71444587-144e-4ee1-95fc-3e2b16833675
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[21].m_ActionId
+      propertyPath: m_ActionEvents.Array.data[20].m_ActionId
       value: fa97694d-8003-4c29-bfb9-1c94ee8b17b5
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_ActionId
+      value: d60a2111-14ce-4bc7-8b9d-6f7089d99385
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[22].m_ActionId
-      value: 40ba6412-f63a-452e-aee9-5a43a3c1ef9e
+      value: 6266cdcb-6b13-44a0-8c09-0f1951ac4242
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[23].m_ActionId
-      value: c5c824e6-63e8-48ed-af24-fe052fbf075c
+      value: aa5d4701-97cd-4f21-9ae6-fa1c9bb52cfb
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[24].m_ActionId
-      value: b7bdab81-66a0-4b25-ac93-f83bd86df177
+      value: 37e6d0cc-f104-4e7e-a1e0-0e59918513f1
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[25].m_ActionId
-      value: 067d51ec-7e18-4299-8bc2-5ccf66ef23aa
+      value: 6979a82e-65f1-4b2e-995e-8b4c8d667c9f
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[26].m_ActionId
-      value: d924bdc1-51ff-47fc-9039-26a763aab8e2
+      value: 0d6ab925-6b78-4337-a4bd-03779d58dfa4
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[27].m_ActionId
-      value: ba158c07-3f21-4f91-be63-fa01499889b3
+      value: f37be0f9-e0b8-4b1f-9881-d85a686e91aa
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[28].m_ActionId
-      value: e9d0e250-d671-49ac-a901-f8bbe4655d3a
+      value: b065504d-e785-4a00-af28-ba23cd19c82d
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[29].m_ActionId
@@ -1069,39 +1073,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionName
-      value: Player/Start
-      objectReference: {fileID: 0}
-    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[20].m_ActionName
       value: 'Plinko/Left[/Keyboard/a]'
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[21].m_ActionName
+      propertyPath: m_ActionEvents.Array.data[20].m_ActionName
       value: 'Plinko/Right[/Keyboard/d]'
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_ActionName
+      value: Player/Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[22].m_ActionName
-      value: Plinko/TutorialEnd
+      value: Player/Push
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[23].m_ActionName
-      value: Tug of War/Up
+      value: TugOfWar/Up
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[24].m_ActionName
-      value: Tug of War/Down
+      value: TugOfWar/Down
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[25].m_ActionName
-      value: Tug of War/Left
+      value: TugOfWar/Right
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[26].m_ActionName
-      value: Tug of War/Right
+      value: TugOfWar/Left
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[27].m_ActionName
-      value: Player/Push
+      value: Plinko/TutorialEnd
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[28].m_ActionName
@@ -1535,14 +1539,14 @@ PrefabInstance:
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_Actions
       value: 
-      objectReference: {fileID: -944628639613478452, guid: f30e01c130ec6c748a6df54fe9b8c18c, type: 3}
+      objectReference: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_DefaultControlScheme
       value: Gamepad
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 27
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
@@ -1558,27 +1562,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[21].m_ActionId
-      value: d60a2111-14ce-4bc7-8b9d-6f7089d99385
+      value: 82312401-92c4-404e-9e3d-ee8864ab2540
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[22].m_ActionId
-      value: aa5d4701-97cd-4f21-9ae6-fa1c9bb52cfb
+      value: ba158c07-3f21-4f91-be63-fa01499889b3
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[23].m_ActionId
-      value: 37e6d0cc-f104-4e7e-a1e0-0e59918513f1
+      value: 40ba6412-f63a-452e-aee9-5a43a3c1ef9e
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[24].m_ActionId
-      value: 6979a82e-65f1-4b2e-995e-8b4c8d667c9f
+      value: c5c824e6-63e8-48ed-af24-fe052fbf075c
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[25].m_ActionId
-      value: 0d6ab925-6b78-4337-a4bd-03779d58dfa4
+      value: b7bdab81-66a0-4b25-ac93-f83bd86df177
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[26].m_ActionId
-      value: f37be0f9-e0b8-4b1f-9881-d85a686e91aa
+      value: 067d51ec-7e18-4299-8bc2-5ccf66ef23aa
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[27].m_ActionId
+      value: d924bdc1-51ff-47fc-9039-26a763aab8e2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[28].m_ActionId
+      value: e9d0e250-d671-49ac-a901-f8bbe4655d3a
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[29].m_ActionId
+      value: dadcc7f4-c717-4c0a-a0d4-392dddfca238
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionName
@@ -1594,23 +1610,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[22].m_ActionName
-      value: TugOfWar/Up
+      value: Player/Push
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[23].m_ActionName
-      value: TugOfWar/Down
+      value: Plinko/TutorialEnd
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[24].m_ActionName
-      value: TugOfWar/Right
+      value: Tug of War/Up
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[25].m_ActionName
-      value: TugOfWar/Left
+      value: Tug of War/Down
       objectReference: {fileID: 0}
     - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
       propertyPath: m_ActionEvents.Array.data[26].m_ActionName
-      value: Plinko/TutorialEnd
+      value: Tug of War/Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[27].m_ActionName
+      value: Tug of War/Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[28].m_ActionName
+      value: Counting/Count
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657524343261258211, guid: ed7ab5b2e854876838556843b9552dc2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[29].m_ActionName
+      value: Platformer/OnPush
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2539,8 +2567,8 @@ Transform:
   m_GameObject: {fileID: 775234448}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.76, y: -2.25, z: 0}
-  m_LocalScale: {x: 1.9567423, y: 2, z: 2}
+  m_LocalPosition: {x: -5.92, y: -2.25, z: 0}
+  m_LocalScale: {x: 2.641602, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 469895849}
@@ -4048,8 +4076,8 @@ Transform:
   m_GameObject: {fileID: 1501639157}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.59, y: -2.25, z: 0}
-  m_LocalScale: {x: 2.0335546, y: 2, z: 2}
+  m_LocalPosition: {x: -1.85, y: -2.25, z: 0}
+  m_LocalScale: {x: 2.7961376, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 469895849}
@@ -4140,8 +4168,8 @@ Transform:
   m_GameObject: {fileID: 1533599261}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.46, y: -2.25, z: 0}
-  m_LocalScale: {x: 2.1200001, y: 2, z: 2}
+  m_LocalPosition: {x: 2.69, y: -2.25, z: 0}
+  m_LocalScale: {x: 3.0740004, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 469895849}
@@ -4353,7 +4381,7 @@ GameObject:
   - component: {fileID: 1603880951}
   m_Layer: 0
   m_Name: '!TEMPGAMEMANAGER'
-  m_TagString: GameManager
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
