@@ -2211,13 +2211,9 @@ MonoBehaviour:
   overallP1Score: 0
   overallP2Score: 0
   minigameNames:
-  - WatchOut
   - BouncyBall
   - PlinkoSort
   - TugOfWar
-  - Counting
-  p1ScoreText: {fileID: 0}
-  p2ScoreText: {fileID: 0}
 --- !u!1 &1064549102
 GameObject:
   m_ObjectHideFlags: 0

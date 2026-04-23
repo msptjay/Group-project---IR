@@ -3377,13 +3377,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1227525431}
+  - component: {fileID: 1227525432}
   m_Layer: 5
   m_Name: '! Tutorial Holder'
   m_TagString: TutorialHolder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1227525431
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3413,6 +3414,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1227525432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227525430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30644c91fa8532449afe69315ca8df5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreShow
+  p1ScoreText: {fileID: 0}
+  p2ScoreText: {fileID: 0}
 --- !u!1 &1236242009
 GameObject:
   m_ObjectHideFlags: 0
@@ -4370,37 +4385,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568400142}
   m_CullTransparentMesh: 1
---- !u!1 &1603880950
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1603880951}
-  m_Layer: 0
-  m_Name: '!TEMPGAMEMANAGER'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1603880951
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603880950}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.36452, y: 1.18173, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1630910026
 GameObject:
   m_ObjectHideFlags: 0
@@ -5440,4 +5424,3 @@ SceneRoots:
   - {fileID: 1786440323}
   - {fileID: 1799423276}
   - {fileID: 547193909}
-  - {fileID: 1603880951}

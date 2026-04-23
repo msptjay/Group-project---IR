@@ -29,7 +29,7 @@ public class CountingPlayer : MonoBehaviour
             {
                 cM.p1Count();
             }
-            else
+            if(playerNumber == 2)
             {
                 cM.p2Count();
             }
