@@ -6,8 +6,7 @@ public class CountingUIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI timer;
     [SerializeField] TextMeshProUGUI p1Text;
     [SerializeField] TextMeshProUGUI p2Text;
-    [SerializeField] GameObject UIManager;
-    [SerializeField] CountingUIManager cUIM;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

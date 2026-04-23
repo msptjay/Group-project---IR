@@ -27,6 +27,7 @@ public class CountingManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Time.timeScale = 0f;
         StartCoroutine(SpawnLoop());
     }
 
@@ -72,12 +73,12 @@ public class CountingManager : MonoBehaviour
             p2CorrectCount++;
         Instantiate(p2Objects[p1ObjectIndex], new Vector2(Random.Range(2f, 8.5f), 6), Quaternion.identity);
     }
-    public void p1Count()
+    public void p2Count()
     {
         p1TotalCount++;
         cUIM.UpdatePlayerCounting(1, p1TotalCount);
     }
-    public void p2Count()
+    public void p1Count()
     {
         p2TotalCount++;
         cUIM.UpdatePlayerCounting(2, p2TotalCount);

@@ -953,10 +953,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSelect
   info1: {fileID: 1167131021}
   info2: {fileID: 494479317}
-  info3: {fileID: 0}
-  info4: {fileID: 0}
-  info5: {fileID: 0}
-  info6: {fileID: 0}
+  info3: {fileID: 544899947}
+  info4: {fileID: 1212470974}
+  info5: {fileID: 1281643786}
+  info6: {fileID: 1290104498}
 --- !u!1 &354695972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,10 +1142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1481,9 +1481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Berry Count
-
-'
+  m_text: Salad Sum-Up
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -2323,7 +2321,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 748863783}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 345862253}
+        m_TargetAssemblyTypeName: MinigameSelect, Assembly-CSharp
+        m_MethodName: BackButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &748863783
 MonoBehaviour:
   m_ObjectHideFlags: 0

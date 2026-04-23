@@ -1210,6 +1210,17 @@
                 },
                 {
                     "name": "",
+                    "id": "8ddd11e2-5d48-466b-bed1-e2c732b26d0c",
+                    "path": "<Joystick>/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a8977d58-00bc-4d95-9a6a-a9b0005ae393",
                     "path": "<Keyboard>/d",
                     "interactions": "",
@@ -1223,6 +1234,17 @@
                     "name": "",
                     "id": "4a2be1e3-8856-453c-9b56-1c57540025df",
                     "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1442971d-c0e5-4b78-af4c-7a71c3760191",
+                    "path": "<Joystick>/stick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1255,6 +1277,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "e75059e4-c3e1-4ec7-afb9-f217839e66d8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1266,6 +1297,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Count",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "35102fb0-ed44-45d7-8ef4-6d01cbf442b0",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "419557fe-3b70-4a55-ac8a-a897eb57392d",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

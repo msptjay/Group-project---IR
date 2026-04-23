@@ -20,7 +20,7 @@ TagManager:
   - P2OverallScore
   - GameManager
   - Ladder
-  - Player2
+  - BouncyWall
   layers:
   - Default
   - TransparentFX
