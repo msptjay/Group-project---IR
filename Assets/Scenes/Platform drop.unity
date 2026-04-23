@@ -848,9 +848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
-  p1Score: 0
-  p2Score: 0
-  Platform: {fileID: 318447366}
   disappearDelay: 3
   isTriggered: 0
   startingPlatTime: 0
@@ -1329,9 +1326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
-  p1Score: 0
-  p2Score: 0
-  Platform: {fileID: 424240882}
   disappearDelay: 3
   isTriggered: 0
   startingPlatTime: 0
@@ -2141,6 +2135,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734446108}
   m_CullTransparentMesh: 1
+--- !u!1 &748924865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 748924866}
+  m_Layer: 0
+  m_Name: Player2Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &748924866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748924865}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.48, y: 0.76, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &763205140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2327,7 +2352,7 @@ GameObject:
   - component: {fileID: 795402464}
   m_Layer: 0
   m_Name: Player Character 2
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2693,8 +2718,8 @@ MonoBehaviour:
   maxHealth: 2
   currentHealth: 0
   UIManager: {fileID: 1721856794}
-  wUIM: {fileID: 1513935820}
-  playerNumber: 0
+  wUIM: {fileID: 0}
+  playerNumber: 2
 --- !u!114 &795402463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2885,7 +2910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 905293764}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Player1Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2900,7 +2925,7 @@ Transform:
   m_GameObject: {fileID: 905293763}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0.76, z: 0}
+  m_LocalPosition: {x: -1.13, y: 0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2937,9 +2962,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
-  p1Score: 0
-  p2Score: 0
-  Platform: {fileID: 982531770}
   disappearDelay: 3
   isTriggered: 0
   startingPlatTime: 0
@@ -3235,9 +3257,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a5338055e5920429435f30e670ee8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnderWorld
-  damage: 2
+  damage: 1
   player: {fileID: 1141295791}
+  player2: {fileID: 795402455}
   respawnPoint: {fileID: 905293764}
+  respawnPoint2: {fileID: 748924866}
   platformPrefab: {fileID: 3062519360521432104, guid: a6599ce7c2a1abae1bf5115e943548a0, type: 3}
   platformPosition: {fileID: 1406258052}
 --- !u!1 &1141295791
@@ -3277,8 +3301,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxHealth: 2
   currentHealth: 0
-  UIManager: {fileID: 1721856794}
-  wUIM: {fileID: 1513935820}
+  UIManager: {fileID: 1513935818}
+  wUIM: {fileID: 0}
   playerNumber: 0
 --- !u!114 &1141295794
 MonoBehaviour:
@@ -3466,7 +3490,7 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 6266cdcb-6b13-44a0-8c09-0f1951ac4242
     m_ActionName: Player/Push
-  m_NeverAutoSwitchControlSchemes: 0
+  m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
@@ -3747,9 +3771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
-  p1Score: 0
-  p2Score: 0
-  Platform: {fileID: 1199711274}
   disappearDelay: 3
   isTriggered: 0
   startingPlatTime: 0
@@ -4556,9 +4577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
-  p1Score: 0
-  p2Score: 0
-  Platform: {fileID: 1430273956}
   disappearDelay: 3
   isTriggered: 0
   startingPlatTime: 0
@@ -4694,7 +4712,7 @@ GameObject:
   - component: {fileID: 1513935819}
   - component: {fileID: 1513935822}
   - component: {fileID: 1513935821}
-  - component: {fileID: 1513935820}
+  - component: {fileID: 1513935823}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -4717,20 +4735,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 330479722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1513935820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513935818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12aa005fa0ec6c6488852c8275e32be8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WatchUIManager
-  p1ScoreText: {fileID: 2052153783}
-  p2ScoreText: {fileID: 1718163677}
 --- !u!114 &1513935821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4777,6 +4781,20 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &1513935823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513935818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b602c8a8ffe5da389ef47c89531b26f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UimanPlat
+  p1ScoreText: {fileID: 2052153783}
+  p2ScoreText: {fileID: 1718163677}
 --- !u!1 &1621032440
 GameObject:
   m_ObjectHideFlags: 0
@@ -5033,10 +5051,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8da0b86dbf69d4c8d0ddd78662a7ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Platforms
+  p1Score: 0
+  p2Score: 0
   platforms:
   - {fileID: 1022907924}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 318447366}
+  - {fileID: 424240882}
+  - {fileID: 982531770}
+  - {fileID: 1430273956}
+  - {fileID: 1199711274}
   startingPlatform: {fileID: 31794517}
   disappearDelay: 3
   isTriggered: 0
@@ -5637,3 +5660,4 @@ SceneRoots:
   - {fileID: 330479722}
   - {fileID: 763205141}
   - {fileID: 905293764}
+  - {fileID: 748924866}

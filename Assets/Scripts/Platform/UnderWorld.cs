@@ -6,8 +6,11 @@ public class UnderWorld : MonoBehaviour
     private Platforms manager;
     private PlayerHealth playerHealth;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject player2;
     public Transform respawnPoint;
+    public Transform respawnPoint2;
     public GameObject platformPrefab;
+   // public GameObject platformPrefab2;
 
     public Transform platformPosition;
 
@@ -18,13 +21,32 @@ public class UnderWorld : MonoBehaviour
             collision.gameObject
                 .GetComponent<PlayerHealth>()
                 .TakeDamage(damage);
-            if (playerHealth.HealthStatus() == 0)
+            if (collision.gameObject.GetComponent<PlayerHealth>().HealthStatus() <= 0)
             {
                 Destroy(gameObject);
             }
-            else if (playerHealth.HealthStatus() <= 0);
+            else if (collision.gameObject.GetComponent<PlayerHealth>().HealthStatus() >= 0)
             {
             player.transform.position = respawnPoint.position;
+            Instantiate(platformPrefab, platformPosition.position, Quaternion.identity);
+            }
+
+
+            
+        }
+
+        else if (collision.gameObject.CompareTag("Player2"))
+        {
+            collision.gameObject
+                .GetComponent<PlayerHealth>()
+                .TakeDamage(damage);
+            if (collision.gameObject.GetComponent<PlayerHealth>().HealthStatus() <= 0)
+            {
+                Destroy(gameObject);
+            }
+            else if (collision.gameObject.GetComponent<PlayerHealth>().HealthStatus() >= 0)
+            {
+            player2.transform.position = respawnPoint2.position;
             Instantiate(platformPrefab, platformPosition.position, Quaternion.identity);
             }
 

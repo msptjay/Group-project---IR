@@ -5,6 +5,8 @@ using System.Collections;
 
 public class Platforms : MonoBehaviour
 {
+    public int p1Score;
+    public int p2Score;
     GameObject gameManager;
     GameManager gM;
     [Header("Objects")] [SerializeField] private GameObject[] platforms;
@@ -35,7 +37,7 @@ public class Platforms : MonoBehaviour
     {
         if (player.HealthStatus() <= 0)
         {
-            //  gM.LoadNextLevel();
+              gM.LoadNextLevel();
         }
     }
 /*
@@ -107,5 +109,22 @@ public class Platforms : MonoBehaviour
 
         }
         
+    }
+    public void AddScore(int score, bool P1score)
+    {
+        if (P1score)
+        {
+            p1Score += score;
+        }
+        else
+        {
+            p2Score += score;
+        }
+       // pUIM.UpdateScores(p1Score, p2Score);
+    }
+
+    public void GameFinished()
+    { 
+        gM.LevelEnded(p1Score, p2Score); 
     }
 }

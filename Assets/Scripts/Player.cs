@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
     private float horizontal;
-    private float vertical;
+    private bool jump;
 
     private bool isLadder;
     private bool isClimbing;
@@ -29,8 +29,8 @@ public class Player : MonoBehaviour
 
     jumpForce = 10f;
     moveSpeed = 5f;
-    //   gameManager = GameObject.Find("GameManager");
-//        gM = gameManager.GetComponent<GameManager>();
+     //  gameManager = GameObject.Find("GameManager");
+//       gM = gameManager.GetComponent<GameManager>();
 }
 
     
@@ -38,15 +38,7 @@ public class Player : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
 
-        if(isClimbing)
-        {
-            rb.gravityScale = 0f;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, vertical * moveSpeed);
-        }
-        else
-        {
-            rb.gravityScale = 1f;
-        }
+       
     }
     public void Update()
     {
@@ -55,8 +47,9 @@ public class Player : MonoBehaviour
        // {
        //     isClimbing = true;
        // }
-         anim.SetFloat("Speed", Mathf.Abs(horizontal));
+        anim.SetBool("Jumping1", rb.linearVelocity.y > .1f);
 
+        anim.SetFloat("Speed", Mathf.Abs(horizontal));
         if(horizontal > 0 && transform.localScale.x < 0 || horizontal < 0 && transform.localScale.x > 0)
         {
             Flip();
@@ -65,6 +58,12 @@ public class Player : MonoBehaviour
         {
             Flip();
         }
+    
+       // anim.SetBool("Jumping1", rb.linearVelocity.y > .1f);
+        
+      
+
+        
     }
      void Flip()
     {
@@ -81,8 +80,15 @@ public class Player : MonoBehaviour
     {
         if (context.performed && IsGrounded())
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            jump = true;
+          rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+         
         }
+
+
+        
+        
+       
     }
     private bool IsGrounded()
     {

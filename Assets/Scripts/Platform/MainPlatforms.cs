@@ -10,10 +10,9 @@ public class MainPlatforms : MonoBehaviour
 {
 
 
-    public int p1Score;
-    public int p2Score;
+    
 
-    [SerializeField] private GameObject Platform;
+   // [SerializeField] private GameObject Platform;
 
     [SerializeField] private float disappearDelay = 3f;
     [SerializeField] private bool isTriggered = false;
@@ -108,21 +107,5 @@ public class MainPlatforms : MonoBehaviour
     restoreRoutine = null;
 }
 
-    public void AddScore(int score, bool P1score)
-    {
-        if (P1score)
-        {
-            p1Score += score;
-        }
-        else
-        {
-            p2Score += score;
-        }
-        //pUIM.UpdateScores(p1Score, p2Score);
-    }
-
-    public void GameFinished()
-    { 
-       // gM.LevelEnded(p1Score, p2Score); 
-    }
+   
 }
