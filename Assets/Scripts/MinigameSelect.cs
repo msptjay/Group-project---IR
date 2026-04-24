@@ -4,13 +4,16 @@ using UnityEngine.SceneManagement;
 public class MinigameSelect : MonoBehaviour
 {
     [SerializeField] GameObject info1, info2, info3, info4, info5, info6;
+    
     public void Button1Hover()
     {
         info1.SetActive(true);
+        
     }
     public void Button1Press()
     {
         Debug.Log("Pressed Button 1");
+        SceneManager.LoadScene("PlinkoSort");
     }
     public void Button1Leave()
     {
@@ -23,6 +26,7 @@ public class MinigameSelect : MonoBehaviour
     public void Button2Press()
     {
         Debug.Log("Pressed Button 2");
+        SceneManager.LoadScene("TugOfWar");
     }
     public void Button2Leave()
     {
@@ -35,6 +39,7 @@ public class MinigameSelect : MonoBehaviour
     public void Button3Press()
     {
         Debug.Log("Pressed Button 3");
+        SceneManager.LoadScene("BouncyBall");
     }
     public void Button3Leave()
     {
@@ -47,6 +52,7 @@ public class MinigameSelect : MonoBehaviour
     public void Button4Press()
     {
         Debug.Log("Pressed Button 4");
+        SceneManager.LoadScene("WatchOut");
     }
     public void Button4Leave()
     {
@@ -59,7 +65,9 @@ public class MinigameSelect : MonoBehaviour
     public void Button5Press()
     {
         Debug.Log("Pressed Button 5");
+        SceneManager.LoadScene("Counting");
     }   
+
     public void Button5Leave()
     {
         info5.SetActive(false);
@@ -71,6 +79,7 @@ public class MinigameSelect : MonoBehaviour
     public void Button6Press()
     {
         Debug.Log("Pressed Button 6");
+        SceneManager.LoadScene("Platform Drop");
     }
     public void Button6Leave()
     {
