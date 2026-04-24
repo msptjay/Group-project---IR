@@ -100,7 +100,7 @@ public class TugManager : MonoBehaviour
                 player1Score++;
                 player2Score--;
                 tUIM.UpdateScores(player1Score, player2Score);
-                if(currentPosition <= -4 || currentPosition >= 4)
+                if (player1Score == 4 || player2Score == -4)
                     GameFinished();
 
                 ResetInputs();
@@ -140,7 +140,7 @@ public class TugManager : MonoBehaviour
                 player1Score--;
                 transform.position = new Vector3(transform.position.x + 0.4f, transform.position.y, transform.position.z);
                 tUIM.UpdateScores(player1Score, player2Score);
-                if (currentPosition <= -4 || currentPosition >= 4)
+                if (player2Score == 4 || player1Score == -4)
                     GameFinished();
                 ResetInputs();
             }

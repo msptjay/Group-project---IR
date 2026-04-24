@@ -17,41 +17,58 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
     private float horizontal;
-    private float vertical;
+    private bool jump;
 
     private bool isLadder;
     private bool isClimbing;
+    public Animator anim;
+    public int facingDirection = 1;
 
     private void Awake()
     {
 
     jumpForce = 10f;
     moveSpeed = 5f;
-    //   gameManager = GameObject.Find("GameManager");
-//        gM = gameManager.GetComponent<GameManager>();
+     //  gameManager = GameObject.Find("GameManager");
+//       gM = gameManager.GetComponent<GameManager>();
 }
 
-    public void update()
-    {
-        vertical = Input.GetAxis("Vertical");
-        if(isLadder && Mathf.Abs(vertical) > 0)
-        {
-            isClimbing = true;
-        }
-    }
+    
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
 
-        if(isClimbing)
+       
+    }
+    public void Update()
+    {
+      //  vertical = Input.GetAxis("Vertical");
+      //  if(isLadder && Mathf.Abs(vertical) > 0)
+       // {
+       //     isClimbing = true;
+       // }
+        anim.SetBool("Jumping1", rb.linearVelocity.y > .1f);
+
+        anim.SetFloat("Speed", Mathf.Abs(horizontal));
+        if(horizontal > 0 && transform.localScale.x < 0 || horizontal < 0 && transform.localScale.x > 0)
         {
-            rb.gravityScale = 0f;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, vertical * moveSpeed);
+            Flip();
         }
-        else
+        else if(horizontal < 0 && transform.localScale.x > 0)
         {
-            rb.gravityScale = 1f;
+            Flip();
         }
+    
+       // anim.SetBool("Jumping1", rb.linearVelocity.y > .1f);
+        
+      
+
+        
+    }
+     void Flip()
+    {
+        facingDirection *= -1;
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -63,8 +80,15 @@ public class Player : MonoBehaviour
     {
         if (context.performed && IsGrounded())
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            jump = true;
+          rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+         
         }
+
+
+        
+        
+       
     }
     private bool IsGrounded()
     {
@@ -96,4 +120,6 @@ public class Player : MonoBehaviour
             isClimbing = false;
         }
     }
+     
+   
 }

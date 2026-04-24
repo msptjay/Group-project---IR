@@ -1084,6 +1084,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SpinLeft",
+                    "type": "Value",
+                    "id": "ff83f36c-ce30-4944-998f-05d26b715d31",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -1104,7 +1113,18 @@
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
+                    "action": "Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4a6c6f88-a48d-40d3-a578-05addfb9fd5e",
+                    "path": "<Joystick>/stick/left",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": ";Gamepad",
                     "action": "Left",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1133,12 +1153,34 @@
                 },
                 {
                     "name": "",
+                    "id": "dccea677-89bb-4f30-8101-7f469c6ada94",
+                    "path": "<Joystick>/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3d52b47d-c660-4273-9793-96352641b8eb",
                     "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "TutorialEnd",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "abed5f48-0842-43c8-9377-f12d1d7f6255",
+                    "path": "<Joystick>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpinLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1244,6 +1286,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "a175c595-6d36-4070-a15d-2a27167cb115",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1266,6 +1317,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Count",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "88dfc071-0af5-4d93-bfc0-24eee0c0440c",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

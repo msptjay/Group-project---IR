@@ -9,11 +9,13 @@ public class BouncyBallUI : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI timer;
     [SerializeField] private float timerCountdown;
+    public bool isEndFuncCalled = false;
     [SerializeField] BallSpawner bS;
 
 
     void Start()
     {
+        isEndFuncCalled = false;
         timerCountdown = 45f;
        
     }
@@ -24,9 +26,10 @@ public class BouncyBallUI : MonoBehaviour
         timerCountdown -= Time.deltaTime;
         int displayTime = Mathf.CeilToInt(timerCountdown);
         timer.text = displayTime.ToString();
-        if (timerCountdown <= 0f)
+        if (timerCountdown <= 0f && isEndFuncCalled == false)
         {
             bS.GameFinished();
+            isEndFuncCalled = true;
         }
     }
 

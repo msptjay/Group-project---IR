@@ -5,6 +5,8 @@ using System.Collections;
 
 public class Platforms : MonoBehaviour
 {
+    public int p1Score;
+    public int p2Score;
     GameObject gameManager;
     GameManager gM;
     [Header("Objects")] [SerializeField] private GameObject[] platforms;
@@ -16,14 +18,14 @@ public class Platforms : MonoBehaviour
     
     [SerializeField] private float mainTimer;
     [SerializeField] private PlayerHealth player;
-    [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
+   // [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
     
-    [SerializeField] private TextMeshProUGUI platform1;
+   // [SerializeField] private TextMeshProUGUI platform1;
 
     public void Start()
     {
-        //  gameManager = GameObject.FindWithTag("GameManager");
-        //  gM = gameManager.GetComponent<GameManager>();
+         gameManager = GameObject.FindWithTag("GameManager");
+         gM = gameManager.GetComponent<GameManager>();
         mainTimer = 46f;
         startingPlatTime = 6f;
         StartCoroutine(startingCountdown());
@@ -35,7 +37,7 @@ public class Platforms : MonoBehaviour
     {
         if (player.HealthStatus() <= 0)
         {
-            //  gM.LoadNextLevel();
+              gM.LoadNextLevel();
         }
     }
 /*
@@ -85,16 +87,16 @@ public class Platforms : MonoBehaviour
             
             while (timer > 0)
             {
-               platform1.text = "Timer: " + Mathf.FloorToInt(timer);
+               //platform1.text = "Timer: " + Mathf.FloorToInt(timer);
                 timer -= Time.deltaTime;
                 yield return null;
             }
            
-            Destroy(platform1);
+            //Destroy(platform1);
             Destroy(startingPlatform);
             while (timer1 > 0)
             {
-                mainPlatforms.text = "Timer: " + Mathf.FloorToInt(timer1);
+               // mainPlatforms.text = "Timer: " + Mathf.FloorToInt(timer1);
                 timer1 -= Time.deltaTime;
                 if (timer1 <= 0)
                 {
@@ -107,5 +109,22 @@ public class Platforms : MonoBehaviour
 
         }
         
+    }
+    public void AddScore(int score, bool P1score)
+    {
+        if (P1score)
+        {
+            p1Score += score;
+        }
+        else
+        {
+            p2Score += score;
+        }
+       // pUIM.UpdateScores(p1Score, p2Score);
+    }
+
+    public void GameFinished()
+    { 
+        gM.LevelEnded(p1Score, p2Score); 
     }
 }

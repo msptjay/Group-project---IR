@@ -31,30 +31,39 @@ public class BouncingBall : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collider.gameObject.CompareTag("Player"))
         {
             //rb.AddForce(Vector2.up * 10f, ForceMode2D.Impulse);
-            rb.AddForce(new Vector2(UnityEngine.Random.Range(-5f, 5f), 1 * 10f), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(UnityEngine.Random.Range(-2f, 2f), 2 * 10f), ForceMode2D.Impulse);
 
-            if (collision.gameObject.name == "Player")
+            if (collider.gameObject.name == "Player")
             {
                 ownedBy = 1;
                 sr.material.SetColor("_Color", Color.yellow);
             }
-            if (collision.gameObject.name == "Player2")
+            if (collider.gameObject.name == "Player2")
             {
                 ownedBy = 2;
                 sr.material.SetColor("_Color", Color.mediumBlue);
             }
         }
-        if(collision.gameObject.CompareTag("BouncyBall"))
-        {
-            rb.AddForce(new Vector2(UnityEngine.Random.Range(-10f, 10f), 1 * 4f), ForceMode2D.Impulse);
-        }
+        
+    }
 
-        if(collision.gameObject.CompareTag("ScoreFloor"))
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("BouncyBall"))
+        {
+            rb.AddForce(new Vector2(UnityEngine.Random.Range(-3f, 3f), 1 * 2f), ForceMode2D.Impulse);
+        }
+        if(collision.gameObject.CompareTag("BouncyWall"))
+        {
+            Vector3 desiredDirection = new Vector2(100, 0);
+            Vector3 newVelocity = desiredDirection.normalized * rb.angularVelocity;
+        }
+        if (collision.gameObject.CompareTag("ScoreFloor"))
         {
             if (ownedBy == 1)
             {

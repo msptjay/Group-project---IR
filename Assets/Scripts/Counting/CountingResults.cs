@@ -6,6 +6,8 @@ public class CountingResults : MonoBehaviour
 {
     [SerializeField] GameObject CountingManager;
     [SerializeField] CountingManager cM;
+    GameObject gameManager;
+    GameManager gM;
 
     [SerializeField] TextMeshProUGUI p1CorrectNumber;
     [SerializeField] TextMeshProUGUI p2CorrectNumber;
@@ -20,6 +22,8 @@ public class CountingResults : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameManager = GameObject.FindWithTag("GameManager");
+        gM = gameManager.GetComponent<GameManager>();
         animator = GetComponent<Animator>();
         anim = GetComponent<Animation>();
         p1CorrectNumber.text = "x " + cM.p1CorrectCount.ToString();
@@ -41,7 +45,7 @@ public class CountingResults : MonoBehaviour
     {
         gameWinner = playerWin;
     }
-
+    // called from the animation
     public void DisplayWinner()
     {
         switch(gameWinner)
@@ -57,9 +61,20 @@ public class CountingResults : MonoBehaviour
                 break;
         }
     }
-    
+    public void NextLevel()
+    {
+        if(gameWinner == 1)
+        {
+            gM.overallP1Score++;
+            gM.LevelEnded(1, 0);
+        }
+        else if(gameWinner == 2)
+        {
+            gM.LevelEnded(0, 1);
+        }
+    }
 
-    IEnumerator ScoreTick()
+        IEnumerator ScoreTick()
     {
         while (true)
         {

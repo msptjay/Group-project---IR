@@ -68,5 +68,6 @@ public class BallSpawner : MonoBehaviour
     public void GameFinished()
     {
         gM.LevelEnded(player1Score, player2Score);
+
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MinigameSelect : MonoBehaviour
 {
@@ -75,4 +76,9 @@ public class MinigameSelect : MonoBehaviour
     {
         info6.SetActive(false);
     }
+    public void BackButtonPress()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }
