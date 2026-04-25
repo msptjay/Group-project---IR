@@ -29,6 +29,7 @@ public class ColumnManager : MonoBehaviour
 
     [SerializeField] private  PlayerInput playerInput;
     [SerializeField] private PlayerInput playerInput2;
+    
     void Start()
     {
       gameManager = GameObject.FindWithTag("GameManager");
@@ -147,7 +148,7 @@ public void LockedInSpot(int column)
         {
             p2Score += score;
         }
-       // pUIM.UpdateScores(p1Score, p2Score);
+       // wUIM.UpdateScores(p1Score, p2Score);
     }
 
     public void GameFinished()

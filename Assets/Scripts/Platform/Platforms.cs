@@ -17,9 +17,9 @@ public class Platforms : MonoBehaviour
     
     [SerializeField] private float mainTimer;
     [SerializeField] private PlayerHealth player;
-   // [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
-    
-   // [SerializeField] private TextMeshProUGUI platform1;
+   [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
+
+    [SerializeField] private TextMeshProUGUI platform1;
 
     public void Start()
     {
@@ -86,7 +86,7 @@ public class Platforms : MonoBehaviour
             
             while (timer > 0)
             {
-               //platform1.text = "Timer: " + Mathf.FloorToInt(timer);
+               platform1.text = "Timer: " + Mathf.FloorToInt(timer);
                 timer -= Time.deltaTime;
                 yield return null;
             }
@@ -95,7 +95,7 @@ public class Platforms : MonoBehaviour
             Destroy(startingPlatform);
             while (timer1 > 0)
             {
-               // mainPlatforms.text = "Timer: " + Mathf.FloorToInt(timer1);
+               mainPlatforms.text = "Timer: " + Mathf.FloorToInt(timer1);
                 timer1 -= Time.deltaTime;
                 if (timer1 <= 0)
                 {

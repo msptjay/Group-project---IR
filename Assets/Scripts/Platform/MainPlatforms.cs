@@ -12,7 +12,7 @@ public class MainPlatforms : MonoBehaviour
 
     
 
-   // [SerializeField] private GameObject Platform;
+    //[SerializeField] private GameObject Platform;
 
     [SerializeField] private float disappearDelay = 3f;
     [SerializeField] private bool isTriggered = false;
@@ -20,7 +20,7 @@ public class MainPlatforms : MonoBehaviour
     [SerializeField] private float currentTimer;
     private Coroutine countdownRoutine;
     Coroutine restoreRoutine;
-   // [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
+   [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
 
 
     public void Start()
@@ -31,7 +31,7 @@ public class MainPlatforms : MonoBehaviour
 
     private void Update()
     {
-       //mainPlatforms.text = Mathf.Floor(currentTimer).ToString();
+       mainPlatforms.text = Mathf.Floor(currentTimer).ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -81,13 +81,13 @@ public class MainPlatforms : MonoBehaviour
             if (isTriggered)
             {
                 currentTimer -= Time.deltaTime;
-                //mainPlatforms.text = "" + currentTimer;
+                mainPlatforms.text = "" + currentTimer;
             }
             
             if (currentTimer <= 0)
             {
               Destroy(gameObject);
-              //mainPlatforms.gameObject.SetActive(false);
+              mainPlatforms.gameObject.SetActive(false);
               countdownRoutine = null;
              yield break;
                 
@@ -104,7 +104,9 @@ public class MainPlatforms : MonoBehaviour
     {
        currentTimer = Mathf.Min(currentTimer + 1f, disappearDelay);
     }
+    
     restoreRoutine = null;
+    
 }
 
    
