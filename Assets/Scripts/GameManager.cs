@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     //set minigame names through editor
     [SerializeField] string[] minigameNames;
     public bool playingOneGame = false;
-    
+    bool shouldGameEnd = false;
+
 
     GameObject TutorialHolder;
     void Start()
@@ -45,7 +46,7 @@ public class GameManager : MonoBehaviour
         if (playingOneGame)
         {
             playingOneGame = false;
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("WinScreen");
         }
         else
         {
@@ -57,7 +58,13 @@ public class GameManager : MonoBehaviour
             {
                 overallP2Score++;
             }
-            LoadNextLevel();
+            if(overallP1Score >= 5 || overallP2Score >= 5)
+            {
+                SceneManager.LoadScene("WinScreen");
+                shouldGameEnd = true;
+            }
+            if(!shouldGameEnd)
+                LoadNextLevel();
         }
     }
 }
