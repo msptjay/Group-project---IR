@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public int overallP2Score;
     //set minigame names through editor
     [SerializeField] string[] minigameNames;
+    public bool playingOneGame = false;
     
 
     GameObject TutorialHolder;
@@ -32,22 +33,31 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(minigameNames[randomIndex]);
     }
 
-    public void TestOneLevel()
+    public void PlayOneLevel(string MinigameName)
     {
         //put the string of the minigame you want to test here
-        SceneManager.LoadScene("BouncyBall");
+        SceneManager.LoadScene(MinigameName);
+        playingOneGame = true;
     }
 
     public void LevelEnded(int p1Score, int p2Score)
     {
-        if(p1Score > p2Score)
+        if (playingOneGame)
         {
-            overallP1Score++;
+            playingOneGame = false;
+            SceneManager.LoadScene("MainMenu");
         }
-        else if(p2Score > p1Score)
+        else
         {
-            overallP2Score++;
+            if (p1Score > p2Score)
+            {
+                overallP1Score++;
+            }
+            else if (p2Score > p1Score)
+            {
+                overallP2Score++;
+            }
+            LoadNextLevel();
         }
-        LoadNextLevel();
     }
 }

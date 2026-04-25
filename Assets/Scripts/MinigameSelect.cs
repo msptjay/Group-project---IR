@@ -3,6 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class MinigameSelect : MonoBehaviour
 {
+    private GameObject gameManager;
+    private GameManager gM;
+     void Start()
+    {
+        gameManager = GameObject.Find("GameManager");
+        gM = gameManager.GetComponent<GameManager>();
+    }
     [SerializeField] GameObject info1, info2, info3, info4, info5, info6;
     public void Button1Hover()
     {
@@ -10,7 +17,7 @@ public class MinigameSelect : MonoBehaviour
     }
     public void Button1Press()
     {
-        Debug.Log("Pressed Button 1");
+        gM.PlayOneLevel("PlinkoSort");
     }
     public void Button1Leave()
     {
@@ -22,7 +29,7 @@ public class MinigameSelect : MonoBehaviour
     }
     public void Button2Press()
     {
-        Debug.Log("Pressed Button 2");
+        gM.PlayOneLevel("TugOfWar");
     }
     public void Button2Leave()
     {
@@ -34,7 +41,7 @@ public class MinigameSelect : MonoBehaviour
     }
     public void Button3Press()
     {
-        Debug.Log("Pressed Button 3");
+        gM.PlayOneLevel("BouncyBall");
     }
     public void Button3Leave()
     {
@@ -46,7 +53,7 @@ public class MinigameSelect : MonoBehaviour
     }
     public void Button4Press()
     {
-        Debug.Log("Pressed Button 4");
+        gM.PlayOneLevel("WatchOut");
     }
     public void Button4Leave()
     {
@@ -58,7 +65,7 @@ public class MinigameSelect : MonoBehaviour
     }
     public void Button5Press()
     {
-        Debug.Log("Pressed Button 5");
+        gM.PlayOneLevel("Counting");
     }   
     public void Button5Leave()
     {
@@ -70,7 +77,7 @@ public class MinigameSelect : MonoBehaviour
     }
     public void Button6Press()
     {
-        Debug.Log("Pressed Button 6");
+        gM.PlayOneLevel("Platform drop");
     }
     public void Button6Leave()
     {

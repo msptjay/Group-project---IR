@@ -7,7 +7,7 @@ public class TugManager : MonoBehaviour
     GameObject gameManager;
     GameManager gM;
 
-    public float targetTime = 6.0f;
+    public float targetTime = 5.0f;
 
     //0= up, 1= down, 2= left, 3= right
     [SerializeField] int buttonInput = 4;
@@ -42,15 +42,15 @@ public class TugManager : MonoBehaviour
         if (shouldTimerRun)
         {
             targetTime -= Time.deltaTime;
-            if (targetTime >= 5.95)
+            if (targetTime >= 4.95)
             {
                 arrowSpriteRenderer.sprite = arrowSprites[4];
             }
-            if(targetTime < 2.5f && targetTime > 1.5f)
+            if(targetTime < 2f && targetTime > 1f)
             {
                 arrowSpriteRenderer.color = Color.yellow;
             }
-            if(targetTime <= 1.5f && targetTime > 0.01f)
+            if(targetTime <= 1f && targetTime > 0.01f)
             {
                 arrowSpriteRenderer.color = Color.red;
             }
@@ -77,7 +77,7 @@ public class TugManager : MonoBehaviour
         if (targetTime <= -4f)
         {
             Debug.Log("Too Slow !!!");
-            targetTime = 6.0f;
+            targetTime = 5f;
             shouldTimerRun = true;
         }
     }
@@ -91,7 +91,7 @@ public class TugManager : MonoBehaviour
             if (input == buttonInput)
             {
                 Debug.Log("Player 1 is correct!");
-                targetTime = 6.0f;
+                targetTime = 5f;
                 hasPlayerAnsweredCorrect = true;
                 hasPlayer1Answered = true;
                 shouldTimerRun = true;
@@ -131,7 +131,7 @@ public class TugManager : MonoBehaviour
             if (input == buttonInput)
             {
                 Debug.Log("Player 2 is correct!");
-                targetTime = 6.0f;
+                targetTime = 5f;
                 hasPlayerAnsweredCorrect = true;
                 hasPlayer2Answered = true;
                 shouldTimerRun = true;
@@ -166,7 +166,7 @@ public class TugManager : MonoBehaviour
     {
          hasPlayer1Answered = false;
          hasPlayer2Answered = false;
-         targetTime = 6.0f;
+         targetTime = 5f;
          shouldTimerRun = true;
         
     }
