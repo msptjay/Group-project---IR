@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private float jumpForce;
+    [SerializeField] GameObject tutorialHolder;
     private float horizontal;
     private bool jump;
 
@@ -120,6 +121,13 @@ public class Player : MonoBehaviour
             isClimbing = false;
         }
     }
-     
-   
+    public void FinishTutorial(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Time.timeScale = 1f;
+            tutorialHolder.SetActive(false);
+        }
+    }
+
 }
