@@ -62,8 +62,6 @@ public class Player : MonoBehaviour
     
        // anim.SetBool("Jumping1", rb.linearVelocity.y > .1f);
         
-      
-
         
     }
      void Flip()
@@ -86,10 +84,6 @@ public class Player : MonoBehaviour
          
         }
 
-
-        
-        
-       
     }
     private bool IsGrounded()
     {

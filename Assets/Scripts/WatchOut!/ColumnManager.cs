@@ -101,7 +101,7 @@ public class ColumnManager : MonoBehaviour
 
     public void SetPlayerSlot(int slotIndex)
     {
-        if (roundActive) // Only allow changing while timer running
+        if (roundActive) 
         {
             ColumnPlace = slotIndex;
             Debug.Log("Player currently in slot: " + ColumnPlace);
@@ -125,11 +125,13 @@ public void LockedInSpot(int column)
             {
                 // Spawn branch in the chosen column
                 Instantiate(branchPrefab, columns[i].position, Quaternion.identity);
+                
             }
             else
             {
                 // Spawn fruit in all other columns
                 Instantiate(fruitPrefab, columns[i].position, Quaternion.identity);
+               
             }
         }
 

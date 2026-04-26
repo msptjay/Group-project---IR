@@ -5111,8 +5111,8 @@ MonoBehaviour:
   - {fileID: 243145822}
   - {fileID: 592277020}
   playerSlots:
-  - {fileID: 1501639159}
   - {fileID: 775234450}
+  - {fileID: 1501639159}
   - {fileID: 1533599263}
   - {fileID: 111491545}
   branchPrefab: {fileID: 8211532627896626104, guid: 09888eb4fa3a0054f8fad1698a543b19, type: 3}
