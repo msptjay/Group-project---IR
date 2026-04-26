@@ -36,6 +36,7 @@ public class MainPlatforms : MonoBehaviour
             mainPlatforms = GameObject.FindGameObjectWithTag("RespawnPlatformTimer").GetComponent<TextMeshProUGUI>();
             maxLifetime = 1.6f;
             currentHealth = maxLifetime;
+            mainPlatforms.text = "";
         }
 
         currentTimer = disappearDelay;
@@ -44,9 +45,11 @@ public class MainPlatforms : MonoBehaviour
 
     private void Update()
     {
-        //THE RESPAWN PLATFORM SHOULD ALWAYS DECREASE LIFE
+        //RESPAWN PLATFORM SPECIFICS
         if (isRespawnPlatform)
+        {
             isCollision = true;
+        }
         //SETS THE COLOR OF THE PLATFORM TO BE MORE TRANSPARENT AS IT LOSES HEALTH
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, currentHealth / maxLifetime);
         //TEXT SETTER
