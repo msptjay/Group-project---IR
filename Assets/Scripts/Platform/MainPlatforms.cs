@@ -27,8 +27,10 @@ public class MainPlatforms : MonoBehaviour
     [SerializeField] bool shouldRegenerate = false;
     private float currentHealth = 2f;
     [SerializeField] bool isRespawnPlatform = true;
+    private float regenCooldown = 2f;
     public void Start()
     {
+        //SETS THE VARIABLES FOR THE RESPAWN PLATFORM (ITS TEXT/LIFE ETC ETC)
         if(isRespawnPlatform)
         {
             mainPlatforms = GameObject.FindGameObjectWithTag("RespawnPlatformTimer").GetComponent<TextMeshProUGUI>();
@@ -42,24 +44,27 @@ public class MainPlatforms : MonoBehaviour
 
     private void Update()
     {
+        //THE RESPAWN PLATFORM SHOULD ALWAYS DECREASE LIFE
         if (isRespawnPlatform)
             isCollision = true;
+        //SETS THE COLOR OF THE PLATFORM TO BE MORE TRANSPARENT AS IT LOSES HEALTH
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, currentHealth / maxLifetime);
-        shouldRegenerate = true;
+        //TEXT SETTER
         mainPlatforms.text = currentHealth.ToString("F1");
         if (isCollision)
         {
+            // Stop regeneration if the platform is being stood on
             shouldRegenerate = false;
             currentHealth -= Time.deltaTime;
+            // If the platform's health reaches zero, disable its sprite and collider
             if (currentHealth <= 0)
             {
                 gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 gameObject.GetComponent<Collider2D>().enabled = false;
-                mainPlatforms.text = "";
-                
+                mainPlatforms.text = ""; 
             }
         }
-
+        //If the platform isn't dead, restore it's health
         if (currentHealth >= 0.1f)
         {
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
@@ -71,10 +76,22 @@ public class MainPlatforms : MonoBehaviour
         {
             mainPlatforms.text = "";
         }
+        //if(currentHealth >= 1f)
+        //{
+        //    shouldRegenerate = false;
+        //}
+        if(currentHealth <= 1f && !isCollision)
+        {
+            shouldRegenerate = true;
+        }
 
         if (currentHealth >= 2)
         {
             currentHealth = 2;
+        }
+        if(!isCollision)
+        {
+            regenCooldown -= Time.deltaTime;
         }
     }
 
@@ -94,7 +111,9 @@ public class MainPlatforms : MonoBehaviour
 //                 countdownRoutine = StartCoroutine(collisionCountdown());
 //}
 //            }
+            currentHealth -= 0.25f;
             isCollision = true;
+            regenCooldown = 2;
         }
     }
 
@@ -123,8 +142,13 @@ public class MainPlatforms : MonoBehaviour
         {
             while (shouldRegenerate)
             {
-                currentHealth += 0.1f;
-                yield return new WaitForSeconds(0.75f);
+                if (regenCooldown <= 0)
+                {
+                    currentHealth += 0.1f;
+                }
+
+                yield return new WaitForSeconds(1f);
+                //yield return new WaitForSeconds(0.75f);
                 //if (currentHealth >= maxLifetime)
                 //{
                 //    gameObject.GetComponent<SpriteRenderer>().enabled = true;
@@ -139,6 +163,7 @@ public class MainPlatforms : MonoBehaviour
 
             }
             yield return null;
+
         }
     
     }
