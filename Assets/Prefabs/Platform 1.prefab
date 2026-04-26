@@ -151,7 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4212af3abb2bd4751b7964038e3c8bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainPlatforms
-  Platform: {fileID: 0}
   disappearDelay: 3
   isTriggered: 0
   startingPlatTime: 0

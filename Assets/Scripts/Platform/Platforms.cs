@@ -28,9 +28,7 @@ public class Platforms : MonoBehaviour
         mainTimer = 46f;
         startingPlatTime = 6f;
         StartCoroutine(startingCountdown());
-
     }
-
 
     public void Update()
     {
@@ -39,6 +37,53 @@ public class Platforms : MonoBehaviour
               gM.LoadNextLevel();
         }
     }
+
+    IEnumerator startingCountdown()
+    {
+        while (true)
+        {
+            float timer = startingPlatTime;
+            float timer1 = mainTimer;
+            
+            while (timer > 0)
+            {
+               platform1.text = "Timer: " + Mathf.FloorToInt(timer);
+                timer -= Time.deltaTime;
+                yield return null;
+            }
+           
+            //Destroy(platform1);
+            Destroy(startingPlatform);
+            while (timer1 > 0)
+            {
+               mainPlatforms.text = "Timer: " + Mathf.FloorToInt(timer1);
+                timer1 -= Time.deltaTime;
+                if (timer1 <= 0)
+                {
+                    
+                }
+                yield return null;
+            }
+        } 
+    }
+    public void AddScore(int score, bool P1score)
+    {
+        if (P1score)
+        {
+            p1Score += score;
+        }
+        else
+        {
+            p2Score += score;
+        }
+       // pUIM.UpdateScores(p1Score, p2Score);
+    }
+
+    public void GameFinished()
+    { 
+        gM.LevelEnded(p1Score, p2Score); 
+    }
+}
 /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -77,53 +122,3 @@ public class Platforms : MonoBehaviour
             
      }
 */
-    IEnumerator startingCountdown()
-    {
-        while (true)
-        {
-            float timer = startingPlatTime;
-            float timer1 = mainTimer;
-            
-            while (timer > 0)
-            {
-               platform1.text = "Timer: " + Mathf.FloorToInt(timer);
-                timer -= Time.deltaTime;
-                yield return null;
-            }
-           
-            //Destroy(platform1);
-            Destroy(startingPlatform);
-            while (timer1 > 0)
-            {
-               mainPlatforms.text = "Timer: " + Mathf.FloorToInt(timer1);
-                timer1 -= Time.deltaTime;
-                if (timer1 <= 0)
-                {
-                    
-                }
-                yield return null;
-            }
-            
-
-
-        }
-        
-    }
-    public void AddScore(int score, bool P1score)
-    {
-        if (P1score)
-        {
-            p1Score += score;
-        }
-        else
-        {
-            p2Score += score;
-        }
-       // pUIM.UpdateScores(p1Score, p2Score);
-    }
-
-    public void GameFinished()
-    { 
-        gM.LevelEnded(p1Score, p2Score); 
-    }
-}

@@ -21,6 +21,8 @@ TagManager:
   - GameManager
   - Ladder
   - BouncyWall
+  - Player2
+  - RespawnPlatformTimer
   layers:
   - Default
   - TransparentFX
