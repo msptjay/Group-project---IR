@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int overallP1Score = 2;
+    public int overallP1Score;
     public int overallP2Score;
     //set minigame names through editor
     [SerializeField] string[] minigameNames;
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayOneLevel(string MinigameName)
     {
-        //put the string of the minigame you want to test here
+        //put the string of the minigame you want to play here
         SceneManager.LoadScene(MinigameName);
         playingOneGame = true;
     }
@@ -45,6 +45,14 @@ public class GameManager : MonoBehaviour
     {
         if (playingOneGame)
         {
+            if (p1Score > p2Score)
+            {
+                overallP1Score++;
+            }
+            else if (p2Score > p1Score)
+            {
+                overallP2Score++;
+            }
             playingOneGame = false;
             SceneManager.LoadScene("WinScreen");
         }

@@ -1363,8 +1363,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0, g: 0.7265785, b: 1, a: 1}
+  m_Sprite: {fileID: 3152632043030853285, guid: 949dd56b8ef6382409fe0e72876906bf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1381,13 +1381,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394762596}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.42, y: -4.23, z: 0}
-  m_LocalScale: {x: 0.65, y: 1.2, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.08146509, w: 0.9966762}
+  m_LocalPosition: {x: 0.921, y: -3.847, z: 0}
+  m_LocalScale: {x: -0.40731305, y: 0.38538077, z: 0.6266354}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.346}
 --- !u!1 &499121767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2926,6 +2926,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a175c595-6d36-4070-a15d-2a27167cb115
     m_ActionName: 'Counting/Start[/XInputControllerWindows1/start,/XInputControllerWindows2/start]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ff83f36c-ce30-4944-998f-05d26b715d31
+    m_ActionName: Plinko/SpinLeft
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Counting
@@ -2980,8 +2984,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 0.89133024, b: 0, a: 1}
+  m_Sprite: {fileID: -8335708750221705294, guid: ecf6af043b6543245b64c186bb14be5f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2998,13 +3002,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088519115}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1.82, y: -4.19, z: 0}
-  m_LocalScale: {x: 0.65, y: 1.2, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.052, y: -3.77, z: 0}
+  m_LocalScale: {x: 0.35124698, y: 0.31612232, z: 0.54038}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1088519122
 MonoBehaviour:
   m_ObjectHideFlags: 0

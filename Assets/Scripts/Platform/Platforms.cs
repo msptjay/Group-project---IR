@@ -21,10 +21,16 @@ public class Platforms : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI platform1;
 
+    [SerializeField] GameObject player1;
+    [SerializeField] GameObject player2;
+    PlayerHealth p1Health;
+    PlayerHealth p2Health;
     public void Start()
     {
-         gameManager = GameObject.FindWithTag("GameManager");
-         gM = gameManager.GetComponent<GameManager>();
+        gameManager = GameObject.FindWithTag("GameManager");
+        gM = gameManager.GetComponent<GameManager>();
+        p1Health = player1.GetComponent<PlayerHealth>();
+        p2Health = player2.GetComponent<PlayerHealth>();
         mainTimer = 46f;
         startingPlatTime = 6f;
         StartCoroutine(startingCountdown());
@@ -32,9 +38,17 @@ public class Platforms : MonoBehaviour
 
     public void Update()
     {
-        if (player.HealthStatus() <= 0)
+        //if (player.HealthStatus() <= 0)
+        //{
+        //      gM.LoadNextLevel();
+        //}
+        if(p1Health.currentHealth <= 0)
+        { 
+            gM.LevelEnded(0, 1);
+        }
+        else if(p2Health.currentHealth <= 0)
         {
-              gM.LoadNextLevel();
+            gM.LevelEnded(1, 0);
         }
     }
 
