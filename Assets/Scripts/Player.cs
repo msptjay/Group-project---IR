@@ -27,12 +27,12 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-
-    jumpForce = 10f;
-    moveSpeed = 5f;
-     //  gameManager = GameObject.Find("GameManager");
-//       gM = gameManager.GetComponent<GameManager>();
-}
+        Time.timeScale = 0f;
+        jumpForce = 10f;
+        moveSpeed = 5f;
+        //gameManager = GameObject.Find("GameManager");
+        //gM = gameManager.GetComponent<GameManager>();
+    }
 
     
     private void FixedUpdate()

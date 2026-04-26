@@ -10,7 +10,7 @@ public class TugManager : MonoBehaviour
     public float targetTime = 5.0f;
 
     //0= up, 1= down, 2= left, 3= right
-    [SerializeField] int buttonInput = 4;
+    int buttonInput = 4;
     bool hasPlayerAnsweredCorrect = false;
     bool shouldTimerRun = true;
     [SerializeField] Sprite[] arrowSprites;
@@ -19,8 +19,8 @@ public class TugManager : MonoBehaviour
     bool hasPlayer1Answered = false;
     bool hasPlayer2Answered = false;
 
-    [SerializeField] int player1Score;
-    [SerializeField] int player2Score;
+    int player1Score;
+    int player2Score;
     int currentPosition;
 
     [SerializeField] GameObject UIManager;

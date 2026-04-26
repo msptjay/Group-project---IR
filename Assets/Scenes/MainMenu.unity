@@ -2214,6 +2214,9 @@ MonoBehaviour:
   - BouncyBall
   - PlinkoSort
   - TugOfWar
+  - Platform drop
+  - Counting
+  playingOneGame: 0
 --- !u!1 &1064549102
 GameObject:
   m_ObjectHideFlags: 0

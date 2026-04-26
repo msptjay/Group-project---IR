@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Be the first person to press the button shown to move the rope your way!
+  m_text: Stay on the dissapearing platforms as long as you can!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2824,14 +2824,14 @@ RectTransform:
   m_GameObject: {fileID: 975951371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 9.139411, y: 4.9324765, z: 4.8715816}
+  m_LocalScale: {x: 8.649406, y: 4.6680245, z: 4.610395}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1290104499}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 229, y: 80}
+  m_AnchoredPosition: {x: 229, y: 68}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &975951373
@@ -2854,7 +2854,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1924262792514995133, guid: 6ed983c6e1924d341b8a8ece01b8ebaf, type: 3}
+  m_Sprite: {fileID: 3990996285581023761, guid: 2fe48ffd90247bf42bd448597a5dc68e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4284,6 +4284,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 10
+    callback:
+      m_PersistentCalls:
+        m_Calls:
         - m_Target: {fileID: 345862253}
           m_TargetAssemblyTypeName: MinigameSelect, Assembly-CSharp
           m_MethodName: Button6Leave

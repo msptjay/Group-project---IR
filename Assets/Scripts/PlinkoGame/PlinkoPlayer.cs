@@ -31,14 +31,14 @@ public class PlinkoPlayer : MonoBehaviour
         {
             foreach (GameObject peg in plinkoPegs)
             {
-                peg.transform.Rotate(0, 0, -0.4f);
+                peg.transform.Rotate(0, 0, -0.3f);
             }
         }
         else if(xInput < 0)
         {
             foreach (GameObject peg in plinkoPegs)
             {
-                peg.transform.Rotate(0, 0, 0.4f);
+                peg.transform.Rotate(0, 0, 0.3f);
             }
         }
 

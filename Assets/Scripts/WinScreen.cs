@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class WinScreen : MonoBehaviour
 {
@@ -11,8 +13,9 @@ public class WinScreen : MonoBehaviour
     [SerializeField] GameObject p1Icon;
     [SerializeField] GameObject p2Icon;
 
+    [SerializeField] TextMeshProUGUI winText;
 
-    void Awake()
+    void Start()
     {
         player1WinSetup.SetActive(false);
         player2WinSetup.SetActive(false);
@@ -24,11 +27,13 @@ public class WinScreen : MonoBehaviour
         {
             player1WinSetup.SetActive(true);
             StartCoroutine(FlipCharacter(p1Icon));
+            winText.text = "PLAYER 1 WINS!";
         }
         else if(gM.overallP2Score > gM.overallP1Score)
         {
             player2WinSetup.SetActive(true);
             StartCoroutine(FlipCharacter(p2Icon));
+            winText.text = "PLAYER 2 WINS!";
         }
     }
 
@@ -38,7 +43,13 @@ public class WinScreen : MonoBehaviour
         while (true)
         {
             winningCharacter.transform.localScale = new Vector3(-winningCharacter.transform.localScale.x, winningCharacter.transform.localScale.y, winningCharacter.transform.localScale.z);
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(0.6f);
         }
+    }
+
+    public void ReturnToMenu()
+    {
+        Destroy(gameManager);
+        SceneManager.LoadScene("MainMenu");
     }
 }
