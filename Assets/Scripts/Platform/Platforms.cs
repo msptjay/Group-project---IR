@@ -16,7 +16,7 @@ public class Platforms : MonoBehaviour
     [Header("Timers")] [SerializeField] private float startingPlatTime;
     
     [SerializeField] private float mainTimer;
-    [SerializeField] private PlayerHealth player;
+    //[SerializeField] private PlayerHealth player;
    [Header("Texts")] [SerializeField] private TextMeshProUGUI mainPlatforms;
 
     [SerializeField] private TextMeshProUGUI platform1;

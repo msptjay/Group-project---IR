@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
             {
                 overallP2Score++;
             }
-            if(overallP1Score >= 5 || overallP2Score >= 5)
+            if(overallP1Score >= 4 || overallP2Score >= 4)
             {
                 SceneManager.LoadScene("WinScreen");
                 shouldGameEnd = true;
