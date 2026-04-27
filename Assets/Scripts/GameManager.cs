@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("WinScreen");
                 shouldGameEnd = true;
             }
+            Debug.Log("Trying to load next level,");
             if(!shouldGameEnd)
                 LoadNextLevel();
         }

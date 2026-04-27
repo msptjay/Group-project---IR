@@ -10,17 +10,18 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] GameObject ball;
     [SerializeField] BouncyBallUI bouncyBallUI;
 
-    [SerializeField] int player1Score = 0;
-    [SerializeField] int player2Score = 0;
+    int player1Score = 0;
+    int player2Score = 0;
 
 
     //Miles Code
-    
 
     bool shouldSpawnBall = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        player1Score = 0;
+        player2Score = 0;
         gameManager = GameObject.FindWithTag("GameManager");
         gM = gameManager.GetComponent<GameManager>();
 
@@ -67,6 +68,7 @@ public class BallSpawner : MonoBehaviour
 
     public void GameFinished()
     {
+        Debug.Log("bS Game Finished called");
         gM.LevelEnded(player1Score, player2Score);
 
     }

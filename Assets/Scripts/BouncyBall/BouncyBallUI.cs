@@ -8,7 +8,7 @@ public class BouncyBallUI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     [SerializeField] private TextMeshProUGUI timer;
-    [SerializeField] private float timerCountdown;
+    private float timerCountdown;
     public bool isEndFuncCalled = false;
     [SerializeField] BallSpawner bS;
 
@@ -28,6 +28,7 @@ public class BouncyBallUI : MonoBehaviour
         timer.text = displayTime.ToString();
         if (timerCountdown <= 0f && isEndFuncCalled == false)
         {
+            Debug.Log("Time's up!");
             bS.GameFinished();
             isEndFuncCalled = true;
         }
