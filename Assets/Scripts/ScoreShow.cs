@@ -16,6 +16,7 @@ public class ScoreShow : MonoBehaviour
         gM = gameManager.GetComponent<GameManager>();
         p1ScoreText = GameObject.FindWithTag("P1OverallScore").GetComponent<TextMeshProUGUI>();
         p2ScoreText = GameObject.FindWithTag("P2OverallScore").GetComponent<TextMeshProUGUI>();
+        gM.hasTriedLoad = false;
     }
 
     // Update is called once per frame

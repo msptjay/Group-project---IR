@@ -1,5 +1,3 @@
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] string[] minigameNames;
     public bool playingOneGame = false;
     bool shouldGameEnd = false;
+    public bool hasTriedLoad = false;
 
 
     GameObject TutorialHolder;
@@ -43,37 +42,42 @@ public class GameManager : MonoBehaviour
 
     public void LevelEnded(int p1Score, int p2Score)
     {
-        if (playingOneGame)
+        if(!hasTriedLoad)
         {
-            if (p1Score > p2Score)
+            if (playingOneGame)
             {
-                overallP1Score++;
-            }
-            else if (p2Score > p1Score)
-            {
-                overallP2Score++;
-            }
-            playingOneGame = false;
-            SceneManager.LoadScene("WinScreen");
-        }
-        else
-        {
-            if (p1Score > p2Score)
-            {
-                overallP1Score++;
-            }
-            else if (p2Score > p1Score)
-            {
-                overallP2Score++;
-            }
-            if(overallP1Score >= 4 || overallP2Score >= 4)
-            {
+                if (p1Score > p2Score)
+                {
+                    overallP1Score++;
+                }
+                else if (p2Score > p1Score)
+                {
+                    overallP2Score++;
+                }
+                playingOneGame = false;
                 SceneManager.LoadScene("WinScreen");
-                shouldGameEnd = true;
             }
-            Debug.Log("Trying to load next level,");
-            if(!shouldGameEnd)
-                LoadNextLevel();
+            else
+            {
+                hasTriedLoad = true;
+                if (p1Score > p2Score)
+                {
+                    overallP1Score++;
+                }
+                else if (p2Score > p1Score)
+                {
+                    overallP2Score++;
+                }
+                if (overallP1Score >= 4 || overallP2Score >= 4)
+                {
+                    SceneManager.LoadScene("WinScreen");
+                    shouldGameEnd = true;
+                }
+                Debug.Log("Trying to load next level,");
+                if (!shouldGameEnd)
+                    LoadNextLevel();
+            }
         }
+        
     }
 }

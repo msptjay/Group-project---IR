@@ -46,9 +46,13 @@ public class ColumnManager : MonoBehaviour
     {
         if (!roundActive) return;
 
-        if (player.HealthStatus() <= 0 || player2.HealthStatus() <= 0)
+        if (player.HealthStatus() <= 0)
         {
-            gM.LoadNextLevel();
+            gM.LevelEnded(0, 1);
+        }
+        if(player2.HealthStatus() <= 0)
+        {
+             gM.LevelEnded(1, 0);
         }
 
     }

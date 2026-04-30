@@ -2211,11 +2211,9 @@ MonoBehaviour:
   overallP1Score: 0
   overallP2Score: 0
   minigameNames:
-  - BouncyBall
   - PlinkoSort
-  - TugOfWar
+  - BouncyBall
   - Platform drop
-  - Counting
   playingOneGame: 0
 --- !u!1 &1064549102
 GameObject:
