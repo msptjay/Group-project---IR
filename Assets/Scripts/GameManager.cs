@@ -28,9 +28,14 @@ public class GameManager : MonoBehaviour
         {
             //if the random minigame is the same as the current one, pick the next one in the list
             randomIndex = (randomIndex + 1) % minigameNames.Length;
+            SceneManager.LoadScene(minigameNames[randomIndex]);
+            Debug.Log("got the same game? maybe this breaks it");
         }
         else
+        {
             SceneManager.LoadScene(minigameNames[randomIndex]);
+            Debug.Log("Loaded level: " + minigameNames[randomIndex]);
+        }
     }
 
     public void PlayOneLevel(string MinigameName)
@@ -73,9 +78,12 @@ public class GameManager : MonoBehaviour
                     SceneManager.LoadScene("WinScreen");
                     shouldGameEnd = true;
                 }
-                Debug.Log("Trying to load next level,");
+                Debug.Log("Trying to load next level");
                 if (!shouldGameEnd)
+                {
+                    Debug.Log("Loading next level FOR REAL");
                     LoadNextLevel();
+                }
             }
         }
         

@@ -2213,8 +2213,12 @@ MonoBehaviour:
   minigameNames:
   - PlinkoSort
   - BouncyBall
+  - TugOfWar
+  - WatchOut
   - Platform drop
+  - Counting
   playingOneGame: 0
+  hasTriedLoad: 0
 --- !u!1 &1064549102
 GameObject:
   m_ObjectHideFlags: 0
